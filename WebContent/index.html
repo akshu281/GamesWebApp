@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Games Recommendation System</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width" />
+
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
+	<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+	/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+	<!-- CSS Files -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/css/material-bootstrap-wizard.css" rel="stylesheet" />
+
+	<!-- CSS Just for demo purpose, don't include it in your project
+	<link href="assets/css/demo.css" rel="stylesheet" /> -->
+</head>
+
+<body>
+	<div class="image-container set-full-height" style="background-image: url('assets/img/hitman.jpg')">
+		<!-- Creative Tim Branding  
+	    <a href="http://creative-tim.com">
+	         <div class="logo-container">
+	            <div class="logo">
+	                <img src="assets/img/new_logo.png">
+	            </div>
+	            <div class="brand">
+	                Creative Tim
+	            </div>
+	        </div>
+	    </a> -->
+
+		<!--  Made With Material Kit  -->
+		<!-- <a href="http://demos.creative-tim.com/material-kit/index.html?ref=material-bootstrap-wizard" class="made-with-mk">
+			<div class="brand">MK</div>
+			<div class="made-with">Made with <strong>Material Kit</strong></div>
+		</a> -->
+
+		<!--   Big container   -->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2">
+					<!--      Wizard container        -->
+					<div class="wizard-container">
+						<div class="card wizard-card" data-color="red" id="wizard">
+							<form action="" method="" id="games">
+								<!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+
+								<div class="wizard-header">
+									<h3 class="wizard-title">
+										Get a Game !
+									</h3>
+									<h5>This information will let us know more about you</h5>
+								</div>
+								<div class="wizard-navigation">
+									<ul>
+										<li>
+											<a href="#details" data-toggle="tab">Personality</a>
+										</li>
+										<li>
+											<a href="#captain" data-toggle="tab">Game Type</a>
+										</li>
+										<li>
+											<a href="#description" data-toggle="tab">Recommendation</a>
+										</li>
+									</ul>
+								</div>
+
+								<div class="tab-content">
+									<div class="tab-pane" id="details">
+										<div class="row">
+											<div class="col-sm-12">
+												<h4 class="info-text"> Let's start with the basic details !</h4>
+											</div>
+											<div class="col-sm-6">
+												<div class="input-group">
+													<!-- <span class="input-group-addon">
+														<i class="material-icons">email</i> Commented and Added first radio button here
+													</span> -->
+													<p>Are you outwardly or inwardly focused? (I/E)</p>
+													<div class="radio">
+														<label>
+															<input type="radio" id="optradio" name="optradio" value="introvert">Introvert</input>
+														</label>
+													</div>
+													<div class="radio">
+														<label>
+															<input type="radio" id="optradio" name="optradio" value="extrovert">Extrovert</input>
+														</label>
+													</div>
+
+
+													<!-- <div class="form-group label-floating">
+			                                          	<label class="control-label">Your Email</label>
+			                                          	<input name="name" type="text" class="form-control">
+			                                        </div>Commented and Added second radio button here-->
+												</div>
+
+												<div class="input-group">
+													<!-- <span class="input-group-addon">
+														<i class="material-icons">lock_outline</i>
+													</span>
+													<div class="form-group label-floating">
+			                                          	<label class="control-label">Your Password</label>
+			                                          	<input name="name2" type="password" class="form-control">
+													</div>													 -->
+													<div class="radio">
+														<p>How do you prefer to take in information? (S/N)</p>
+														<label>
+															<input type="radio" id="optradio1" name="optradio1" value="sensation">Sensation</input>
+														</label>
+													</div>
+													<div class="radio">
+														<label>
+															<input type="radio" id="optradio1" name="optradio1" value="intuition">Intuition</input>
+														</label>
+													</div>
+												</div>
+
+												<!-- //AR//
+												<div class="input-group">
+													<span class="input-group-addon">
+															<i class="material-icons">lock_outline</i>
+														</span>
+														<div class="form-group label-floating">
+															  <label class="control-label">Your Password</label>
+															  <input name="name2" type="password" class="form-control">
+														</div>													 
+													<div class="radio" data-toggle="wizard-radio" rel="tooltip" title="This is good if you travel alone.">
+														<p>How do you prefer to take in information? (S/N)</p>
+														<label>
+															<input type="radio" id="optradio1" name="optradio1">abcadfouerasfhiluaerhf</input>
+														</label>
+													</div>
+													<div class="radio" data-toggle="wizard-radio" rel="tooltip" title="This is good if you travel alone.">
+														<label>
+															<input type="radio" id="optradio1" name="optradio1">Intdaifdhugvilrfhviughafb9igvuition</input>
+														</label>
+													</div>
+												</div> 
+
+												<div class="radio" data-toggle="wizard-radio" rel="tooltip" title="This is good if you travel alone.">
+													<label>
+														<input type="radio" name="job" value="Design">VALUE1</input>
+													</label>
+												</div>
+												//AR//-->
+
+												<!--</div>
+		                                	<div class="col-sm-6">
+		                                    	 <div class="form-group label-floating">
+		                                        	<label class="control-label">Country</label>
+	                                        		<select class="form-control">
+														<option disabled="" selected=""></option>
+	                                                	<option value="Afghanistan"> Afghanistan </option>
+	                                                	<option value="Albania"> Albania </option>
+	                                                	<option value="Algeria"> Algeria </option>
+	                                                	<option value="American Samoa"> American Samoa </option>
+	                                                	<option value="Andorra"> Andorra </option>
+	                                                	<option value="Angola"> Angola </option>
+	                                                	<option value="Anguilla"> Anguilla </option>
+	                                                	<option value="Antarctica"> Antarctica </option>
+	                                                	<option value="...">...</option>
+		                                        	</select>
+		                                    	</div> 
+												<div class="form-group label-floating">
+		                                        	<label class="control-label">Daily Budget</label>
+	                                        		<select class="form-control">
+														<option disabled="" selected=""></option>
+	                                                	<option value="Afghanistan"> < $100 </option>
+	                                                	<option value="Albania"> $100 - $499 </option>
+	                                                	<option value="Algeria"> $499 - $999 </option>
+	                                                	<option value="American Samoa"> $999+ </option>
+		                                        	</select>
+												</div>-->
+
+												<div class="input-group">
+													<!-- <span class="input-group-addon">
+														<i class="material-icons">lock_outline</i>
+													</span>
+													<div class="form-group label-floating">
+			                                          	<label class="control-label">Your Password</label>
+			                                          	<input name="name2" type="password" class="form-control">
+													</div> -->
+
+													<div class="radio">
+														<p>How do you prefer to make decisions? (T/F)</p>
+														<label>
+															<input type="radio" id="optradio2" name="optradio2" value="thinking">Thinking</label>
+														</input>
+													</div>
+													<div class="radio">
+														<label>
+															<input type="radio" id="optradio2" name="optradio2" value="feeling">Feeling</input>
+														</label>
+													</div>
+
+												</div>
+
+												<div class="input-group">
+													<!-- <span class="input-group-addon">
+														<i class="material-icons">lock_outline</i>
+													</span>
+													<div class="form-group label-floating">
+			                                          	<label class="control-label">Your Password</label>
+			                                          	<input name="name2" type="password" class="form-control">
+													</div>  -->
+
+													<div class="radio">
+														<p>How do you prefer to live your outer life? (J/P)</p>
+														<label>
+															<input type="radio" id="optradio3" name="optradio3" value="judging">Judging</input>
+														</label>
+													</div>
+													<div class="radio">
+														<label>
+															<input type="radio" id="optradio3" name="optradio3" value="perceiving">Perceiving</input>
+														</label>
+													</div>
+
+												</div>
+
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane" id="captain">
+										<h4 class="info-text">What type of room would you want? </h4>
+										<div class="row">
+											<!-- <div class="col-sm-10 col-sm-offset-1">
+												<div class="col-sm-4">
+													<div class="radio">
+														<input type="radio" name="job" value="Design">
+														<div class="icon">
+															<i class="material-icons">weekend</i>
+														</div>
+														<h6>Single</h6>
+													</div> 
+											</div> -->
+											<div class="col-sm-6">
+												<!-- <div class="radio">
+													<input type="radio" name="job">
+													<div class="icon">
+															<i class="material-icons">home</i>
+														</div>
+														<h6>Family</h6> -->
+												<div class="input-group">
+													<div class="radio">
+														<p>Would you prefer to play solo or Co-op?</p>
+														<label>
+															<input type="radio" id="optradio4" name="optradio4" value="solo">Solo</input>
+														</label>
+													</div>
+													<div class="radio">
+														<label>
+															<input type="radio" id="optradio4" name="optradio4" value="co-op">Co-op</input>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<!-- <div class="choice" data-toggle="radio" rel="tooltip" title="Select this option if you are coming with your team.">
+														<input type="radio" name="job">
+														<div class="icon">
+															<i class="material-icons">business</i>
+														</div>
+														<h6>Business</h6>
+													</div> -->
+
+												<div class="input-group">
+													<div class="radio">
+														<p>Would you get giddy easily?</p>
+														<label>
+															<input type="radio" id="optradio5" name="optradio5" value="yes">Yes</input>
+														</label>
+													</div>
+													<div class="radio">
+														<label>
+															<input type="radio" id="optradio5" name="optradio5" value="no">No</input>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="tab-pane" id="description">
+										<div class="row">
+											<h4 class="info-text">Recommendation</h4>
+											<div class="col-sm-6 col-sm-offset-1">
+												<div class="form-group">
+													<label>Top 3 Picks</label>
+													<textarea class="form-control" placeholder="" id="resultarea" rows=3 name="resultarea"></textarea>  <!--rows=3-->
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="control-label">Short Description</label>
+													<p class="description">"These games are really nice. It has some kind of magic bound to it !"</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="wizard-footer">
+									<div class="pull-right">
+										<input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' />
+										<input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' id='finish-button' name='finish' value='Finish' />
+									</div>
+									<div class="pull-left">
+										<input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+
+										<!-- <div class="footer-checkbox">
+									<div class="col-sm-12">
+										<div class="checkbox">
+											<label>
+												<input type="checkbox" name="optionsCheckboxes">
+											</label>
+											Subscribe to our newsletter
+										</div>
+									</div>
+								</div> -->
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- wizard container -->
+				</div>
+			</div>
+			<!-- row -->
+		</div>
+		<!--  big container -->
+
+		<!-- <div class="footer">
+		<div class="container text-center">
+			Made with
+			<i class="fa fa-heart heart"></i> by
+			<a href="http://www.creative-tim.com">Creative Tim</a>. Free download
+			<a href="http://www.creative-tim.com/product/material-bootstrap-wizard">here.</a>
+		</div>
+	</div>
+	</div> -->
+
+</body>
+<!--   Core JS Files   -->
+<script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/jquery.bootstrap.js" type="text/javascript"></script>
+
+<!--  Plugin for the Wizard -->
+<script src="assets/js/games.js"></script>
+
+<!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
+<script src="assets/js/jquery.validate.min.js"></script>
+
+</html>
