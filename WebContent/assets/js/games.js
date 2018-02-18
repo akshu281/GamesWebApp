@@ -1,7 +1,7 @@
 var searchVisible = 0;
 var transparent = true;
 var mobile_device = false;
-var baseUrl = "/GamesWebApp/games";
+//var baseUrl = "/GamesWebApp/games";
 
 $(document).ready(function () {
     initComponents();
@@ -26,6 +26,9 @@ $(document).ready(function () {
             //   required: true,
             //   minlength: 3,
             // }
+        	optradio:
+        		{required: true
+        		},
             optradio: {
                 required: true
             },
@@ -58,10 +61,36 @@ $(document).ready(function () {
 
         onNext: function (tab, navigation, index) {
             var $valid = $('.wizard-card form').valid();
+            
             if (!$valid) {
                 $validator.focusInvalid();
                 return false;
             }
+            $.ajax({
+                url: '/GamesWebApp/games/assertfacts',
+                type: "POST",
+                data: {
+                    action: "next",
+                    optradio0: $("#games input[name=optradio0]:checked").val(),
+                    optradio: $("#games input[name=optradio]:checked").val(),
+                    optradio1: $("#games input[name=optradio1]:checked").val(),
+                    optradio2: $("#games input[name=optradio2]:checked").val(),
+                    optradio3: $("#games input[name=optradio3]:checked").val(),
+                    optradio4: $("#games input[name=optradio4]:checked").val(),
+                    optradio5: $("#games input[name=optradio5]:checked").val()
+                },
+                success: function (result) {
+                    console.log(result);
+                    console.log('Success of Asserting Facts');
+                    // $("#games input[name=resultarea]").val(result);
+                    //var msg = result + " is ur game!!!";
+                    // console.log(msg);
+                   // $("#games input[name=resultarea").val(result);
+
+                   // $("#games textarea[name=resultarea]").val(result);
+                }
+            });
+            
             // else
             // {
             //     var optradio = $("#games input[name=optradio]").val();
@@ -136,7 +165,7 @@ $(document).ready(function () {
         }
     });
 
-    // Retreive the values of the radiobuttons
+    // Retrieve the values from Clips
 
     function initComponents() {
         $("#finish-button").click(function () {
@@ -147,18 +176,18 @@ $(document).ready(function () {
             // console.log(email);
             // console.log(age);
 
-            console.log("inside fin");
+            console.log("inside finish func");
             $.ajax({
-                url: baseUrl,
+                url: '/GamesWebApp/games/submitfacts',
                 type: "GET",
                 data: {
-                    action: "start",
-                    optradio: $("#games input[name=optradio]:checked").val(),
-                    optradio1: $("#games input[name=optradio1]:checked").val(),
-                    optradio2: $("#games input[name=optradio2]:checked").val(),
-                    optradio3: $("#games input[name=optradio3]:checked").val(),
-                    optradio4: $("#games input[name=optradio4]:checked").val(),
-                    optradio5: $("#games input[name=optradio5]:checked").val()
+                   // action: "start",
+                   // optradio: $("#games input[name=optradio]:checked").val(),
+                   //optradio1: $("#games input[name=optradio1]:checked").val(),
+                   //optradio2: $("#games input[name=optradio2]:checked").val(),
+                   //optradio3: $("#games input[name=optradio3]:checked").val(),
+                   //optradio4: $("#games input[name=optradio4]:checked").val(),
+                   //optradio5: $("#games input[name=optradio5]:checked").val()
                 },
                 success: function (result) {
                     console.log(result);
