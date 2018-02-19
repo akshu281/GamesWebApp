@@ -100,15 +100,22 @@ public class GamesServlet extends HttpServlet {
 		String messagedata=req.getParameter("inputfacts");
 		System.out.println("Data Recd from JS:" + messagedata);
 		
-		String gender="(User (gender "+inputsplits[1]+"))"; //Included to form an assertstring format
-		String mbti1="(User (MBTI1 "+inputsplits[2]+"))";
-		String mbti2="(User (MBTI2 "+inputsplits[3]+"))";
-		String mbti3="(User (MBTI3 "+inputsplits[4]+"))";
-		String mbti4="(User (MBTI4 "+inputsplits[5]+"))";
+		String gender="(User (gender "+inputsplits[1]+")"; //Included to form an assertstring format
+		String mbti1=" (MBTI1 "+inputsplits[2]+")";
+		String mbti2=" (MBTI2 "+inputsplits[3]+")";
+		String mbti3="(MBTI3 "+inputsplits[4]+")";
+		String mbti4="(MBTI4 "+inputsplits[5]+")";
 		String mbti_com="nil";
 		String game_type="nil";
 		String cf="nil";
-		String datatoassert=gender+"\n"+mbti1+"\n"+mbti2+"\n"+mbti3+"\n"+mbti4+"\n"+mbti_com+"\n"+game_type+"\n"+cf+"\n";
+		// probelm is here too. the fact must look like (User (gender m)(nextslot value)(nest value))
+		//for now we have a rule which fires for gender only right ? 
+		//so other slots we shouldnt insert. 
+		// i will remove them and test. ?? 
+		// okay in that case 
+		//String datatoassert=gender+" "+mbti1+" "+mbti2+" "+mbti3+" "+mbti4+" "+mbti_com+" "+game_type+" "+cf+" "+")";
+		String datatoassert=gender+")";
+		
 		if(inputsplits[0].equals("User"))			//To check if its of User template
 		{
 		
@@ -193,23 +200,25 @@ public class GamesServlet extends HttpServlet {
 	public static ArrayList getfacts(Environment clips,String template) {
 		// TODO Auto-generated method stub
 		try {
-		/* got it yeah :P */
+		
+			/* got it yeah :P */
 			
-			System.out.println("About to enter findallfacts");
+			System.out.println("About to enter find all facts");
 			List<FactAddressValue> facts=clips.findAllFacts(template);
+			System.out.println("Facts: " + facts);
 		
 		ArrayList<HashMap> responseArray=new ArrayList<>();
 		
 		for (FactAddressValue fact:facts) {
 			String[] slots=DefTemplate.templateMap.get(template);
 			HashMap<String, String> result=new HashMap<>();
-			for(String slot :slots) {
+			for(String slot:slots) {
 				System.out.println("Fact Returned from GetFacts func: "+fact.getSlotValue(slot));
 				result.put(slot,fact.getSlotValue(slot).toString());
 			}
 			responseArray.add(result);
 		}
-		System.out.println("found"+responseArray.size());
+		System.out.println("Facts sizes:"+responseArray.size());
 		return responseArray;
 		
 		}

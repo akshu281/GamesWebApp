@@ -1,6 +1,7 @@
 var searchVisible = 0;
 var transparent = true;
 var mobile_device = false;
+var baseUrl = "/GamesWebApp/games";
 
 $(document).ready(function () {
     initComponents();
@@ -60,7 +61,7 @@ $(document).ready(function () {
 
         onNext: function (tab, navigation, index) {
             var $valid = $('.wizard-card form').valid();
-            
+           // 'tabClass': 'details captain recommendation',
            // if (!$valid) {
              //   $validator.focusInvalid();
               //  return false;
@@ -68,6 +69,13 @@ $(document).ready(function () {
             
             // Write if else and two ajax calls to differentiate wizards and its respective data !
             
+           // var tabs = $(".tab-pane");
+           // var currenttab= tabs[index-1];
+            //var currenttab = $(e.target).text();
+           // console.log("Tab Selected:" + index);
+            //Index to select which tab is being selected
+            if(index==1)
+            	{
             var optradio0= $("#games input[name=optradio0]:checked").val();
             var optradio= $("#games input[name=optradio]:checked").val();
             var optradio1= $("#games input[name=optradio1]:checked").val();
@@ -85,18 +93,15 @@ $(document).ready(function () {
                     action: "next",
                     inputfacts: inputfacts,
                 },
+            
                 success: function (result) {
                     console.log(result);
                     console.log('Success of Asserting Facts');
-                    // $("#games input[name=resultarea]").val(result);
-                    //var msg = result + " is ur game!!!";
-                    // console.log(msg);
-                   // $("#games input[name=resultarea").val(result);
-
                    // $("#games textarea[name=resultarea]").val(result);
                 }
+                
             });
-            
+            	}  
         },
 
         onInit: function (tab, navigation, index) {
