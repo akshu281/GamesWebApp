@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,17 +39,21 @@ public class GamesServlet extends HttpServlet {
 	public static Environment initialize(Environment clips, ServletContext servletContext) {
 		// TODO Auto-generated method stub
 		try {
-			File f=new File("New.txt");
-			System.out.println("File created :: " + f.createNewFile());
-			System.out.println("File created :: " + f.getCanonicalPath());
 			clips=new Environment();
-			clips.loadFromResource("D:\\GamesWebApp\\WebContent\\WEB-INF\\clips\\rules.clp");
-			clips.run();
-			clips.loadFromResource("D:\\GamesWebApp\\WebContent\\WEB-INF\\clips\\templates.clp");
+			System.out.println("Opening Templates File in next step");
+			String templates=loadResourceFile(servletContext, "templates.clp");
+			clips.loadFromString(templates);
 			clips.reset();
 			clips.run();
-			return clips;
-	       
+			//clips.loadFromResource("D:\\GamesWebApp\\\\WebContent\\\\WEB-INF\\\\clips\\\\templates.clp");
+			
+			//clips.loadFromResource("D:\\GamesWebApp\\WebContent\\WEB-INF\\clips\\rules.clp");
+			System.out.println("Opening Rules File in next step");
+			String rules=loadResourceFile(servletContext, "rules.clp");
+			clips.loadFromString(rules);
+			//clips.reset();
+			clips.run();
+			return clips;       
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -56,26 +61,81 @@ public class GamesServlet extends HttpServlet {
 		}
 		
 	}
+	
+	public static String loadResourceFile(ServletContext context,String filename) {
+		 System.out.println("loading from resource file");
+		 try {
+			InputStream s=context.getResourceAsStream("/WEB-INF/clips/"+filename);
+			String clipsinfo="";
+			int c=s.read();
+			while(c!=-1) {
+				clipsinfo+=(char)c;
+				c=(int)s.read();
+				
+			}
+			s.close();
+			System.out.println(clipsinfo);
+			return clipsinfo;
+		 }
+		 catch(Exception e) {
+			 e.printStackTrace();
+			 return null;
+			 
+		 }
+	}
+	
+	
+	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		//doGet(req, resp);
-		String [] URLSplits=req.getRequestURI().split("/");
-		int length=URLSplits.length;
-		if(addfacts(clips,req.getParameter("data")))
+		//String [] URLSplits=req.getRequestURI().split("/");
+		
+		String [] inputsplits=req.getParameter("inputfacts").split(",");
+		
+		int length=inputsplits.length;
+		for(int i=0; i<length; i++)
+			System.out.println("Splits per index: "+inputsplits[i]);
+		
+		String messagedata=req.getParameter("inputfacts");
+		System.out.println("Data Recd from JS:" + messagedata);
+		
+		String gender="(User (gender "+inputsplits[1]+"))"; //Included to form an assertstring format
+		String mbti1="(User (MBTI1 "+inputsplits[2]+"))";
+		String mbti2="(User (MBTI2 "+inputsplits[3]+"))";
+		String mbti3="(User (MBTI3 "+inputsplits[4]+"))";
+		String mbti4="(User (MBTI4 "+inputsplits[5]+"))";
+		String mbti_com="nil";
+		String game_type="nil";
+		String cf="nil";
+		String datatoassert=gender+"\n"+mbti1+"\n"+mbti2+"\n"+mbti3+"\n"+mbti4+"\n"+mbti_com+"\n"+game_type+"\n"+cf+"\n";
+		if(inputsplits[0].equals("User"))			//To check if its of User template
+		{
+		
+			//	if(addfacts(clips,req.getParameter("data")))
+		
+			System.out.println("Matched User template and about to call addfacts function");
+			if(addfacts(clips,datatoassert))
 				resp.getWriter().append("Success Post");
 			else {
 				resp.getWriter().append("Failure Post");
+				}
 		}
 	}
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		String [] URLSplits=req.getRequestURI().split("/");
-		int length=URLSplits.length;
-		String template=URLSplits[length-1];
-		if(URLSplits[length-2].equals("getfacts")) {
+		//String [] URLSplits=req.getRequestURI().split("/");
+		//int length=URLSplits.length;
+		//String template=URLSplits[length-1];
+		System.out.println("Entering Get Block");
+		String input=req.getParameter("action");
+		String template="Certainty_Factor"; //Specifying the output field
+		//if(input.equals("finish")) 
+		//{
 			ArrayList facts=getfacts(clips,template);
+			System.out.println("Facts returned during GET: "+ facts.toString());
 			resp.getWriter().append(facts.toString());
 		
 	/*  String action = req.getParameter("action");
@@ -96,7 +156,7 @@ public class GamesServlet extends HttpServlet {
 		// try (PrintWriter pw = resp.getWriter()) {
 		// pw.write(jsonObject.toString());
 		// }
-	}
+	//}
 	}
 	
 	/*private void getStartDetails(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -120,6 +180,7 @@ public class GamesServlet extends HttpServlet {
 	public static boolean addfacts(Environment clips,String data) {
 		try {
 			clips.assertString(data);
+			System.out.println("Asserted String using addfacts: "+data);
 			clips.run();
 			return true;
 		}
@@ -133,6 +194,8 @@ public class GamesServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		try {
 		/* got it yeah :P */
+			
+			System.out.println("About to enter findallfacts");
 			List<FactAddressValue> facts=clips.findAllFacts(template);
 		
 		ArrayList<HashMap> responseArray=new ArrayList<>();
@@ -141,6 +204,7 @@ public class GamesServlet extends HttpServlet {
 			String[] slots=DefTemplate.templateMap.get(template);
 			HashMap<String, String> result=new HashMap<>();
 			for(String slot :slots) {
+				System.out.println("Fact Returned from GetFacts func: "+fact.getSlotValue(slot));
 				result.put(slot,fact.getSlotValue(slot).toString());
 			}
 			responseArray.add(result);

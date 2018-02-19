@@ -8,10 +8,10 @@
 	
 (deftemplate User 
 	(slot gender)
-	(slot MBTI1	)
-	(slot MBTI2	)
-	(slot MBTI3	)
-	(slot MBTI4	)
+	(slot MBTI1)
+	(slot MBTI2)
+	(slot MBTI3)
+	(slot MBTI4)
 	(slot MBTI_Com)
 	(slot Action)
 	(slot Social)
