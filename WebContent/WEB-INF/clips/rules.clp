@@ -558,5 +558,5 @@
 (printout t "We recommend you "?Recommended_Game crlf)
 )
 
-;;(deffunction find-games ()
-	;;(bind ?facts (find-all-facts ((?f Certainty_Factor)) (> ?f:cf 0.00))))
+(deffunction find-games ()
+	(bind ?facts (find-all-facts ((?f Certainty_Factor)) (> ?f:cf 0.00))))

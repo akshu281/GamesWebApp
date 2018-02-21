@@ -41,6 +41,12 @@ $(document).ready(function () {
             optradio7: {
                 required: true
             },
+            optradio8: {
+                required: true
+            },
+            optradio9: {
+                required: true
+            },
         },
         errorPlacement: function (error, element) {
             $(element).parent('div').addClass('has-error');
