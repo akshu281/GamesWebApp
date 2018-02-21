@@ -46,13 +46,13 @@ public class GamesServlet extends HttpServlet {
 		try {
 			clips=new Environment();
 			System.out.println("Opening Templates File in next step");
-			String templates=loadResourceFile(servletContext, "templates.clp");
-			clips.loadFromString(templates);
-			clips.run();
+			//String templates=loadResourceFile(servletContext, "templates.clp");
+			//clips.loadFromString(templates);
+			//clips.run();
 			//clips.loadFromResource("D:\\GamesWebApp\\\\WebContent\\\\WEB-INF\\\\clips\\\\templates.clp");
 			//clips.loadFromResource("D:\\GamesWebApp\\WebContent\\WEB-INF\\clips\\rules.clp");
 			System.out.println("Opening Rules File in next step");
-			String rules=loadResourceFile(servletContext, "rules.clp");
+			String rules=loadResourceFile(servletContext, "rule.clp");
 			clips.loadFromString(rules);
 			clips.reset();
 			clips.run();
@@ -161,9 +161,11 @@ public class GamesServlet extends HttpServlet {
         			//	if(addfacts(clips,req.getParameter("data")))	
         			System.out.println("Matched User template and about to call addfacts function for games type");
         			if(addfacts(clips,data_to_assert))
-        				resp.getWriter().append("Success Post");
+        			{	System.out.println("Assert Success");
+        				resp.getWriter().append("Success Post");}
         			else {
         				resp.getWriter().append("Failure Post");
+        				System.out.println("Assert Fail");
         				}
         		}  //End of Wiz 2
             }     
@@ -172,10 +174,6 @@ public class GamesServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
-		//String [] URLSplits=req.getRequestURI().split("/");
-		//int length=URLSplits.length;
-		//String template=URLSplits[length-1];
 		System.out.println("Entering Get Block");
 		String input=req.getParameter("action");
 		//String template="Certainty_Factor"; //Specifying the output field
@@ -244,7 +242,7 @@ public class GamesServlet extends HttpServlet {
 		        FactAddressValue fv = (FactAddressValue) pv1.get(i);
 		         float certainty = ((NumberValue) fv.getSlotValue("cf")).floatValue(); 
 		         String gametype = fv.getSlotValue("game_type").toString();
-		         System.out.println("Game Type Returned from Clips:"+gametype+"and cf "+ certainty);
+		         System.out.println("Game Type Returned from Clips:"+gametype+" and cf "+ certainty);
 		         responseArray.add(gametype+certainty);
 		        }
 		      return responseArray;
@@ -261,15 +259,10 @@ public class GamesServlet extends HttpServlet {
 		}
 		System.out.println("Facts sizes:"+responseArray.size());
 		return responseArray; */
-		
-		
+				
 		}
-		
-		catch(Exception e) {
-			
+		catch(Exception e) {	
 		}
-		
-		return null;
-		
+		return null;	
 	}
 }

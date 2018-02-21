@@ -11,7 +11,7 @@ public class Config implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent event) {
 //        ServletContext servletContext = event.getServletContext(); 
-        System.out.println("COnfiguration servlet");
+        System.out.println("Configuration servlet");
         servletContext=event.getServletContext();
               
     }
