@@ -82,7 +82,7 @@
 
 ;**** Rule 0: Assert fact Gender.
 (defrule Gender
-(User (gender ?response))
+?gender <- (User (gender ?response))
 =>	
 (printout t crlf "Are you male or female (m/f)")
 ;;(bind ?response (read))
@@ -115,7 +115,7 @@
 		(assert (Certainty_Factor (game_type Simulation)(cf 0.12)))
 		(assert (Certainty_Factor (game_type Rhythm)	(cf 0.14))))
 )
-	
+(modify ?gender (gender done))	
 )
 
 ;**** Rule 1: Assert fact MBTI1.

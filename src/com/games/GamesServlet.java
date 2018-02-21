@@ -53,8 +53,8 @@ public class GamesServlet extends HttpServlet {
 			//clips.loadFromResource("D:\\GamesWebApp\\WebContent\\WEB-INF\\clips\\rules.clp");
 			System.out.println("Opening Rules File in next step");
 			String rules=loadResourceFile(servletContext, "rule.clp");
-			clips.loadFromString(rules);
 			clips.reset();
+			clips.loadFromString(rules);
 			clips.run();
 			return clips;       
 		}
@@ -240,10 +240,10 @@ public class GamesServlet extends HttpServlet {
 		      for (int i = 0; i < pv1.size(); i++) 
 		        {
 		        FactAddressValue fv = (FactAddressValue) pv1.get(i);
-		         float certainty = ((NumberValue) fv.getSlotValue("cf")).floatValue(); 
+		         float certainty = ((NumberValue) fv.getSlotValue("cf")).floatValue()*100; 
 		         String gametype = fv.getSlotValue("game_type").toString();
 		         System.out.println("Game Type Returned from Clips:"+gametype+" and cf "+ certainty);
-		         responseArray.add(gametype+certainty);
+		         responseArray.add(gametype +" " +certainty);
 		        }
 		      return responseArray;
 		
