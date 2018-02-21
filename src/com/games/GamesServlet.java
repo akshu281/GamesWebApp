@@ -4,6 +4,10 @@ import com.google.gson.Gson;
 
 import net.sf.clipsrules.jni.Environment;
 import net.sf.clipsrules.jni.FactAddressValue;
+import net.sf.clipsrules.jni.LexemeValue;
+import net.sf.clipsrules.jni.MultifieldValue;
+import net.sf.clipsrules.jni.NumberValue;
+
 import com.games.DefTemplate;
 
 import com.games.Config;
@@ -43,15 +47,13 @@ public class GamesServlet extends HttpServlet {
 			System.out.println("Opening Templates File in next step");
 			String templates=loadResourceFile(servletContext, "templates.clp");
 			clips.loadFromString(templates);
-			clips.reset();
 			clips.run();
 			//clips.loadFromResource("D:\\GamesWebApp\\\\WebContent\\\\WEB-INF\\\\clips\\\\templates.clp");
-			
 			//clips.loadFromResource("D:\\GamesWebApp\\WebContent\\WEB-INF\\clips\\rules.clp");
 			System.out.println("Opening Rules File in next step");
 			String rules=loadResourceFile(servletContext, "rules.clp");
 			clips.loadFromString(rules);
-			//clips.reset();
+			clips.reset();
 			clips.run();
 			return clips;       
 		}
@@ -91,43 +93,77 @@ public class GamesServlet extends HttpServlet {
 		//doGet(req, resp);
 		//String [] URLSplits=req.getRequestURI().split("/");
 		
-		String [] inputsplits=req.getParameter("inputfacts").split(",");
-		
-		int length=inputsplits.length;
-		for(int i=0; i<length; i++)
-			System.out.println("Splits per index: "+inputsplits[i]);
-		
-		String messagedata=req.getParameter("inputfacts");
-		System.out.println("Data Recd from JS:" + messagedata);
-		
-		String gender="(User (gender "+inputsplits[1]+")"; //Included to form an assertstring format
-		String mbti1=" (MBTI1 "+inputsplits[2]+")";
-		String mbti2=" (MBTI2 "+inputsplits[3]+")";
-		String mbti3="(MBTI3 "+inputsplits[4]+")";
-		String mbti4="(MBTI4 "+inputsplits[5]+")";
-		String mbti_com="nil";
-		String game_type="nil";
-		String cf="nil";
-		// probelm is here too. the fact must look like (User (gender m)(nextslot value)(nest value))
-		//for now we have a rule which fires for gender only right ? 
-		//so other slots we shouldnt insert. 
-		// i will remove them and test. ?? 
-		// okay in that case 
-		//String datatoassert=gender+" "+mbti1+" "+mbti2+" "+mbti3+" "+mbti4+" "+mbti_com+" "+game_type+" "+cf+" "+")";
-		String datatoassert=gender+")";
-		
-		if(inputsplits[0].equals("User"))			//To check if its of User template
-		{
-		
-			//	if(addfacts(clips,req.getParameter("data")))
-		
-			System.out.println("Matched User template and about to call addfacts function");
-			if(addfacts(clips,datatoassert))
-				resp.getWriter().append("Success Post");
-			else {
-				resp.getWriter().append("Failure Post");
-				}
-		}
+        String action = req.getParameter("action");
+        if (action == null) {
+            return;
+            }
+            
+        	else if (action.equals("personality"))    
+            {
+            	String [] inputsplits1=req.getParameter("inputfacts").split(",");
+        		
+        		int length=inputsplits1.length;
+        		for(int i=0; i<length; i++)
+        			System.out.println("Splits per index: "+inputsplits1[i]);
+        		
+        		String messagedata=req.getParameter("inputfacts");
+        		System.out.println("Data Recd from JS:" + messagedata);
+        		
+        		String gender="(User (gender "+inputsplits1[1]+")"; //Included to form an assertstring format
+        		String mbti1="(MBTI1 "+inputsplits1[2]+")";
+        		String mbti2="(MBTI2 "+inputsplits1[3]+")";
+        		String mbti3="(MBTI3 "+inputsplits1[4]+")";
+        		String mbti4="(MBTI4 "+inputsplits1[5]+")";
+        		//String mbti_Com="(MBTI_Com nil))";
+        		//String game_type="(Certainty_Factor (game_type nil)";
+        		//String cf="(cf nil))";
+        		//String data_to_assert=gender+mbti1+mbti2+mbti3+mbti4+mbti_Com+game_type+cf;
+        		String data_to_assert=gender+mbti1+mbti2+mbti3+mbti4+")";
+        		//String datatoassert=gender+")";
+        		
+        		if(inputsplits1[0].equals("User"))			//To check if its of User template
+        		{
+        			//	if(addfacts(clips,req.getParameter("data")))	
+        			System.out.println("Matched User template and about to call addfacts function for personality");
+        			if(addfacts(clips,data_to_assert))
+        				resp.getWriter().append("Success Post");
+        			else {
+        				resp.getWriter().append("Failure Post");
+        				}
+        		}  //End of Wiz 1
+            }
+        
+        	else if (action.equals("gametype"))
+            {
+            	String [] inputsplits=req.getParameter("inputfacts1").split(",");
+        		
+        		int length=inputsplits.length;
+        		for(int i=0; i<length; i++)
+        			System.out.println("Splits per index: "+inputsplits[i]);
+        		
+        		String messagedata=req.getParameter("inputfacts1");
+        		System.out.println("Data Recd from JS:" + messagedata);
+        		
+        		String actiondata="(User (Action "+inputsplits[1]+")"; //Included to form an assertstring format
+        		String social="(Social "+inputsplits[2]+")";
+        		String mastery="(Mastery "+inputsplits[3]+")";
+        		String achievement="(Achievement "+inputsplits[4]+")";
+        		String immersion="(Immersion "+inputsplits[5]+")";
+        		String creativity="(Creativity "+inputsplits[6]+")";
+        		String data_to_assert=actiondata+social+mastery+achievement+immersion+creativity+")";
+        		
+        		if(inputsplits[0].equals("User"))			//To check if its of User template
+        		{
+        			//	if(addfacts(clips,req.getParameter("data")))	
+        			System.out.println("Matched User template and about to call addfacts function for games type");
+        			if(addfacts(clips,data_to_assert))
+        				resp.getWriter().append("Success Post");
+        			else {
+        				resp.getWriter().append("Failure Post");
+        				}
+        		}  //End of Wiz 2
+            }     
+				
 	}
 
 	@Override
@@ -166,28 +202,11 @@ public class GamesServlet extends HttpServlet {
 	//}
 	}
 	
-	/*private void getStartDetails(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		String I_E = req.getParameter("optradio");
-		String S_N = req.getParameter("optradio1");
-		String T_F = req.getParameter("optradio2");
-		String J_P = req.getParameter("optradio3");
-		//System.out.println(I_E);
-
-		LOGGER.info("Int or Ext : " + I_E);
-		LOGGER.info("Sen or Intui : " + S_N);
-		LOGGER.info("Thi or Fee : " + T_F);
-		LOGGER.info("Jud or Per : " + J_P);
-
-		try (PrintWriter pw = resp.getWriter()) {
-			pw.write("Hitman is your game!");
-			System.out.println("Hitman is your game!");
-		}
-	}
-	*/
 	public static boolean addfacts(Environment clips,String data) {
 		try {
+			System.out.println("Fact string to be asserted:" +data);
 			clips.assertString(data);
-			System.out.println("Asserted String using addfacts: "+data);
+			//System.out.println("Asserted String using addfacts: "+data);
 			clips.run();
 			return true;
 		}
@@ -200,16 +219,33 @@ public class GamesServlet extends HttpServlet {
 	public static ArrayList getfacts(Environment clips,String template) {
 		// TODO Auto-generated method stub
 		try {
-		
-			/* got it yeah :P */
-			
+			/* got it yeah :P */			
 			System.out.println("About to enter find all facts");
-			List<FactAddressValue> facts=clips.findAllFacts(template);
-			System.out.println("Facts: " + facts);
+			//List<FactAddressValue> facts=clips.findAllFacts(template);
+			
+		//FactAddressValue pv=(FactAddressValue) clips.findAllFacts(template);			
+		//System.out.println("Facts: " + facts);
+		//	System.out.println("Fact Returned from GetFacts func:"+pv.toString());
+			
+			ArrayList responseArray=new ArrayList<>();
+			
+			MultifieldValue pv1 = (MultifieldValue) clips.eval("(find-games)");
+		      
+		      for (int i = 0; i < pv1.size(); i++) 
+		        {
+		        FactAddressValue fv = (FactAddressValue) pv1.get(i);
+		        
+
+		         float certainty = ((NumberValue) fv.getSlotValue("cf")).floatValue()*100; 
+		         
+		         String gametype = fv.getSlotValue("game_type").toString();
+		         System.out.println("Game Type Returned from Clips:"+gametype+"and cf "+ certainty);
+		         responseArray.add(gametype+certainty);
+		        }
+		      return responseArray;
 		
-		ArrayList<HashMap> responseArray=new ArrayList<>();
 		
-		for (FactAddressValue fact:facts) {
+	/*	for (FactAddressValue fact:facts) {
 			String[] slots=DefTemplate.templateMap.get(template);
 			HashMap<String, String> result=new HashMap<>();
 			for(String slot:slots) {
@@ -219,12 +255,15 @@ public class GamesServlet extends HttpServlet {
 			responseArray.add(result);
 		}
 		System.out.println("Facts sizes:"+responseArray.size());
-		return responseArray;
+		return responseArray; */
+		
 		
 		}
+		
 		catch(Exception e) {
 			
 		}
+		
 		return null;
 		
 	}

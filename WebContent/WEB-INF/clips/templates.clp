@@ -2,10 +2,6 @@
 ;;; Templates for certainty factor to work
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(deftemplate Certainty_Factor 
-	(slot game_type) 
-	(slot cf))	
-	
 (deftemplate User 
 	(slot gender)
 	(slot MBTI1)
@@ -20,3 +16,15 @@
 	(slot Immersion)
 	(slot Creativity)
 )
+
+;;(deftemplate Recommended_Game_Type
+	;;(slot Recommended_Game_Type)
+	;;(slot game_type))
+	
+(deftemplate Certainty_Factor 
+	(slot game_type) 
+	(slot cf))	
+	
+;;(deftemplate Recommended_Game
+	;;(slot Recommended_Game)
+	;;(slot game))

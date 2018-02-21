@@ -14,9 +14,21 @@ $(document).ready(function () {
     // Code for the Validator
     var $validator = $('.wizard-card form').validate({
         rules: {
-        	optradio0: {
-        		required: true
-        	},
+            // firstname: {
+            //   required: true,
+            //   minlength: 3
+            // },
+            // lastname: {
+            //   required: true,
+            //   minlength: 3
+            // },
+            // email: {
+            //   required: true,
+            //   minlength: 3,
+            // }
+        	optradio0:
+        		{required: true
+        		},
             optradio: {
                 required: true
             },
@@ -35,12 +47,6 @@ $(document).ready(function () {
             optradio5: {
                 required: true
             },
-            optradio6: {
-                required: true
-            },
-            optradio7: {
-                required: true
-            },
         },
         errorPlacement: function (error, element) {
             $(element).parent('div').addClass('has-error');
@@ -56,15 +62,13 @@ $(document).ready(function () {
         onNext: function (tab, navigation, index) {
             var $valid = $('.wizard-card form').valid();
             
+           // if (!$valid) {
+             //   $validator.focusInvalid();
+              //  return false;
+           // }
+            
             // Write if else and two ajax calls to differentiate wizards and its respective data !
             
-           // var tabs = $(".tab-pane");
-           // var currenttab= tabs[index-1];
-            //var currenttab = $(e.target).text();
-           // console.log("Tab Selected:" + index);
-            //Index to select which tab is being selected
-            if(index==1)
-            	{
             var optradio0= $("#games input[name=optradio0]:checked").val();
             var optradio= $("#games input[name=optradio]:checked").val();
             var optradio1= $("#games input[name=optradio1]:checked").val();
@@ -79,46 +83,21 @@ $(document).ready(function () {
                 //url: '/GamesWebApp/User/assertfacts',
                 type: "POST",
                 data: {
-                    action: "personality",
+                    action: "next",
                     inputfacts: inputfacts,
                 },
-            
                 success: function (result) {
                     console.log(result);
-                    console.log('Success of Asserting Facts from Wiz 1');
+                    console.log('Success of Asserting Facts');
+                    // $("#games input[name=resultarea]").val(result);
+                    //var msg = result + " is ur game!!!";
+                    // console.log(msg);
+                   // $("#games input[name=resultarea").val(result);
+
                    // $("#games textarea[name=resultarea]").val(result);
                 }
-                
             });
-            	}  
             
-            else if(index==2)
-        	{
-        var optradio4= $("#games input[name=optradio4]:checked").val();
-        var optradio5= $("#games input[name=optradio5]:checked").val();
-        var optradio6= $("#games input[name=optradio6]:checked").val();
-        var optradio7= $("#games input[name=optradio7]:checked").val();
-        var optradio8= $("#games input[name=optradio8]:checked").val();
-        var optradio9= $("#games input[name=optradio9]:checked").val();
-        var inputfacts1= "User"+","+optradio4+","+optradio5+","+optradio6+","+optradio7+","+optradio8+","+optradio9;
-        console.log(inputfacts1);         
-        $.ajax({
-        	url:baseUrl,
-            //url: '/GamesWebApp/User/assertfacts',
-            type: "POST",
-            data: {
-                action: "gametype",
-                inputfacts1: inputfacts1,
-            },
-        
-            success: function (result) {
-                console.log(result);
-                console.log('Success of Asserting Facts from Wiz 2');
-               // $("#games textarea[name=resultarea]").val(result);
-            }
-            
-        });
-        	}           
         },
 
         onInit: function (tab, navigation, index) {
