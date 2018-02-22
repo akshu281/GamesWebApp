@@ -180,34 +180,18 @@ public class GamesServlet extends HttpServlet {
 		//if(input.equals("finish")) 
 		//{
 			//ArrayList facts=getfacts(clips,template);
-			ArrayList facts=getfacts(clips);
-			System.out.println("Facts returned during GET: "+ facts.toString());
-			resp.getWriter().append(facts.toString());
-		
-	/*  String action = req.getParameter("action");
-		if (action == null) {
-			return;
-		}
-	  switch (action) {
-		case "start":
-			getStartDetails(req, resp);
-			break;
-
-		default:
-			break;
-		}*/
-
-		// resp.setContentType("application/json");
-		// resp.setCharacterEncoding("UTF-8");
-		// try (PrintWriter pw = resp.getWriter()) {
-		// pw.write(jsonObject.toString());
-		// }
-	//}
+			//ArrayList facts=getfacts(clips);
+			//System.out.println("Facts returned during GET: "+ facts.toString());
+			//resp.getWriter().append(facts.toString());
+			String facts=getfacts(clips);
+			System.out.println("Facts returned during GET: "+ facts);
+			resp.getWriter().append(facts);
 	}
 	
 	public static boolean addfacts(Environment clips,String data) {
 		try {
 			System.out.println("Fact string to be asserted:" +data);
+			clips.reset();
 			clips.assertString(data);
 			clips.run();
 			return true;
@@ -219,20 +203,15 @@ public class GamesServlet extends HttpServlet {
 	}
 	
 	//public static ArrayList getfacts(Environment clips,String template) {
-		public static ArrayList getfacts(Environment clips) {
+	//	public static ArrayList getfacts(Environment clips) {
+			public static String getfacts(Environment clips) {
 		// TODO Auto-generated method stub
 		try {
 			/* got it yeah :P */			
 			System.out.println("About to enter find all facts");
-			//List<FactAddressValue> facts=clips.findAllFacts(template);
-			
-		//FactAddressValue pv=(FactAddressValue) clips.findAllFacts(template);			
-		//System.out.println("Facts: " + facts);
-		//	System.out.println("Fact Returned from GetFacts func:"+pv.toString());
-			
 			ArrayList responseArray=new ArrayList<>();
-			
-			MultifieldValue pv1 = (MultifieldValue) clips.eval("(find-games)");
+			String fresh="";
+			MultifieldValue pv1 = (MultifieldValue) clips.eval("(find-games-list)");
 			//List<FactAddressValue> pv1=clips.findAllFacts("(find-games)");
 			
 			System.out.println(pv1);
@@ -240,26 +219,19 @@ public class GamesServlet extends HttpServlet {
 		      for (int i = 0; i < pv1.size(); i++) 
 		        {
 		        FactAddressValue fv = (FactAddressValue) pv1.get(i);
-		         float certainty = ((NumberValue) fv.getSlotValue("cf")).floatValue()*100; 
-		         String gametype = fv.getSlotValue("game_type").toString();
-		         System.out.println("Game Type Returned from Clips:"+gametype+" and cf "+ certainty);
-		         responseArray.add(gametype +" " +certainty);
+		         //float certainty = ((NumberValue) fv.getSlotValue("cf")).floatValue()*100; 
+		        // String gametype = fv.getSlotValue("game_type").toString();
+		         //System.out.println("Game Type Returned from Clips:"+gametype+" and cf "+ certainty);
+		         //responseArray.add(gametype +" - "+certainty);
+		        String games_result= fv.getSlotValue("Game").toString();
+		        System.out.println("Games Returned from Clips:"+games_result);
+		        
+		        		fresh= fresh +"\n"+games_result;
+		       // System.out.println(games_result.substring(1, games_result.length() - 1));
+		        responseArray.add(games_result+"\n");
 		        }
-		      return responseArray;
-		
-		
-	/*	for (FactAddressValue fact:facts) {
-			String[] slots=DefTemplate.templateMap.get(template);
-			HashMap<String, String> result=new HashMap<>();
-			for(String slot:slots) {
-				System.out.println("Fact Returned from GetFacts func: "+fact.getSlotValue(slot));
-				result.put(slot,fact.getSlotValue(slot).toString());
-			}
-			responseArray.add(result);
-		}
-		System.out.println("Facts sizes:"+responseArray.size());
-		return responseArray; */
-				
+		   //   return responseArray;
+			return fresh;	
 		}
 		catch(Exception e) {	
 		}

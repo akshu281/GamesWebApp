@@ -14,39 +14,39 @@ $(document).ready(function () {
     // Code for the Validator
     var $validator = $('.wizard-card form').validate({
         rules: {
-        	optradio0: {
-        		required: true
-        	},
-            optradio: {
-                required: true
-            },
-            optradio1: {
-                required: true
-            },
-            optradio2: {
-                required: true
-            },
-            optradio3: {
-                required: true
-            },
-            optradio4: {
-                required: true
-            },
-            optradio5: {
-                required: true
-            },
-            optradio6: {
-                required: true
-            },
-            optradio7: {
-                required: true
-            },
-            optradio8: {
-                required: true
-            },
-            optradio9: {
-                required: true
-            },
+            /*  optradio0: {
+                  required: true
+              },
+              optradio: {
+                  required: true
+              },
+              optradio1: {
+                  required: true
+              },
+              optradio2: {
+                  required: true
+              },
+              optradio3: {
+                  required: true
+              },
+                optradio4: {
+                     required: true
+                 },
+                 optradio5: {
+                     required: true
+                 },
+                 optradio6: {
+                     required: true
+                 },
+                 optradio7: {
+                     required: true
+                 },
+                 optradio8: {
+                     required: true
+                 },
+                 optradio9: {
+                     required: true
+                 },*/
         },
         errorPlacement: function (error, element) {
             $(element).parent('div').addClass('has-error');
@@ -60,71 +60,81 @@ $(document).ready(function () {
         'previousSelector': '.btn-previous',
 
         onNext: function (tab, navigation, index) {
+            //var $valid = $('.wizard-card form').valid();
             var $valid = $('.wizard-card form').valid();
-            
+            if (!$valid) {
+                $validator.focusInvalid();
+                return false;
+            }
+
             // Write if else and two ajax calls to differentiate wizards and its respective data !
-            
-           // var tabs = $(".tab-pane");
-           // var currenttab= tabs[index-1];
+
+            // var tabs = $(".tab-pane");
+            // var currenttab= tabs[index-1];
             //var currenttab = $(e.target).text();
-           // console.log("Tab Selected:" + index);
+            // console.log("Tab Selected:" + index);
             //Index to select which tab is being selected
-            if(index==1)
-            	{
-            var optradio0= $("#games input[name=optradio0]:checked").val();
-            var optradio= $("#games input[name=optradio]:checked").val();
-            var optradio1= $("#games input[name=optradio1]:checked").val();
-            var optradio2= $("#games input[name=optradio2]:checked").val();
-            var optradio3= $("#games input[name=optradio3]:checked").val();
-            var optradio4= $("#games input[name=optradio4]:checked").val();
-            var optradio5= $("#games input[name=optradio5]:checked").val();
-            var inputfacts= "User"+","+optradio0+","+optradio+","+optradio1+","+optradio2+","+optradio3;
-            console.log(inputfacts);         
-            $.ajax({
-            	url:baseUrl,
-                //url: '/GamesWebApp/User/assertfacts',
-                type: "POST",
-                data: {
-                    action: "personality",
-                    inputfacts: inputfacts,
-                },
-            
-                success: function (result) {
-                    console.log(result);
-                    console.log('Success of Asserting Facts from Wiz 1');
-                   // $("#games textarea[name=resultarea]").val(result);
+            if (index == 1) {
+               
+                var isChecked = $("#games input[name=optradio0]:checked").val();
+                console.log(isChecked);
+                if (isChecked!='y'||'n') {
+                    alert('Nothing Selected');
+                } else {
+                    alert('You have selected :' + isChecked);
                 }
                 
-            });
-            	}  
-            
-            else if(index==2)
-        	{
-        var optradio4= $("#games input[name=optradio4]:checked").val();
-        var optradio5= $("#games input[name=optradio5]:checked").val();
-        var optradio6= $("#games input[name=optradio6]:checked").val();
-        var optradio7= $("#games input[name=optradio7]:checked").val();
-        var optradio8= $("#games input[name=optradio8]:checked").val();
-        var optradio9= $("#games input[name=optradio9]:checked").val();
-        var inputfacts1= "User"+","+optradio4+","+optradio5+","+optradio6+","+optradio7+","+optradio8+","+optradio9;
-        console.log(inputfacts1);         
-        $.ajax({
-        	url:baseUrl,
-            //url: '/GamesWebApp/User/assertfacts',
-            type: "POST",
-            data: {
-                action: "gametype",
-                inputfacts1: inputfacts1,
-            },
-        
-            success: function (result) {
-                console.log(result);
-                console.log('Success of Asserting Facts from Wiz 2');
-               // $("#games textarea[name=resultarea]").val(result);
+                var optradio0 = $("#games input[name=optradio0]:checked").val();
+                var optradio = $("#games input[name=optradio]:checked").val();
+                var optradio1 = $("#games input[name=optradio1]:checked").val();
+                var optradio2 = $("#games input[name=optradio2]:checked").val();
+                var optradio3 = $("#games input[name=optradio3]:checked").val();
+                var optradio4 = $("#games input[name=optradio4]:checked").val();
+                var optradio5 = $("#games input[name=optradio5]:checked").val();
+                var inputfacts = "User" + "," + optradio0 + "," + optradio + "," + optradio1 + "," + optradio2 + "," + optradio3;
+                console.log(inputfacts);
+                $.ajax({
+                    url: baseUrl,
+                    //url: '/GamesWebApp/User/assertfacts',
+                    type: "POST",
+                    data: {
+                        action: "personality",
+                        inputfacts: inputfacts,
+                    },
+
+                    success: function (result) {
+                        console.log(result);
+                        console.log('Success of Asserting Facts from Wiz 1');
+                        // $("#games textarea[name=resultarea]").val(result);
+                    }
+
+                });
+            } else if (index == 2) {
+                var optradio4 = $("#games input[name=optradio4]:checked").val();
+                var optradio5 = $("#games input[name=optradio5]:checked").val();
+                var optradio6 = $("#games input[name=optradio6]:checked").val();
+                var optradio7 = $("#games input[name=optradio7]:checked").val();
+                var optradio8 = $("#games input[name=optradio8]:checked").val();
+                var optradio9 = $("#games input[name=optradio9]:checked").val();
+                var inputfacts1 = "User" + "," + optradio4 + "," + optradio5 + "," + optradio6 + "," + optradio7 + "," + optradio8 + "," + optradio9;
+                console.log(inputfacts1);
+                $.ajax({
+                    url: baseUrl,
+                    //url: '/GamesWebApp/User/assertfacts',
+                    type: "POST",
+                    data: {
+                        action: "gametype",
+                        inputfacts1: inputfacts1,
+                    },
+
+                    success: function (result) {
+                        console.log(result);
+                        console.log('Success of Asserting Facts from Wiz 2');
+                        // $("#games textarea[name=resultarea]").val(result);
+                    }
+
+                });
             }
-            
-        });
-        	}           
         },
 
         onInit: function (tab, navigation, index) {
@@ -197,8 +207,8 @@ $(document).ready(function () {
         $("#finish-button").click(function () {
             console.log("inside finish func");
             $.ajax({
-            	url:baseUrl,
-               // url: '/GamesWebApp/gametype/submitfacts',
+                url: baseUrl,
+                // url: '/GamesWebApp/gametype/submitfacts',
                 type: "GET",
                 data: {
                     action: "finish",
@@ -214,11 +224,11 @@ $(document).ready(function () {
 
 
     // Prepare the preview for profile picture
-   $("#wizard-picture").change(function () {
-       readURL(this);
+    $("#wizard-picture").change(function () {
+        readURL(this);
     });
 
-   $('[data-toggle="wizard-radio"]').click(function () {
+    $('[data-toggle="wizard-radio"]').click(function () {
         wizard = $(this).closest('.wizard-card');
         wizard.find('[data-toggle="wizard-radio"]').removeClass('active');
         $(this).addClass('active');

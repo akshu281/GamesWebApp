@@ -490,21 +490,21 @@
 (Recommended_Game_Type FTS)
 (User (Action y))
 =>
-(assert (Recommended_Game (Game Call_of_Duty_WWII)))
+(assert (Recommended_Game Call_of_Duty_WWII))
 )
 
 (defrule Social_Shooter
 (Recommended_Game_Type FTS)
 (User (Social y))
 =>
-(assert (Recommended_Game (Game Overwatch)))
+(assert (Recommended_Game Overwatch))
 )
 
 (defrule Mastery_Shooter
 (Recommended_Game_Type FTS)
 (User (Mastery y))
 =>
-(assert (Recommended_Game (Game Metal_Gear_Solid_V)))
+(assert (Recommended_Game Metal_Gear_Solid_V))
 )
 
 
@@ -512,7 +512,7 @@
 (Recommended_Game_Type FTS)
 (User (Achievement y))
 =>
-(assert (Recommended_Game (Game Destiny_2)))
+(assert (Recommended_Game Destiny_2))
 )
 
 
@@ -520,14 +520,14 @@
 (Recommended_Game_Type FTS)
 (User (Immersion y))
 =>
-(assert (Recommended_Game (Game Bioshock_Infinite)))
+(assert (Recommended_Game Bioshock_Infinite))
 )
 
 (defrule Creativity_Shooter
 (Recommended_Game_Type FTS)
 (User (Creativity y))
 =>
-(assert (Recommended_Game (Game Portal_2)))
+(assert (Recommended_Game Portal_2))
 )
 
 ;;;;;;;;;;;;;;;;;;;;
@@ -538,21 +538,21 @@
 (Recommended_Game_Type RPG)
 (User (Action y))
 =>
-(assert (Recommended_Game (Game Grand_Theft_Auto)))
+(assert (Recommended_Game Grand_Theft_Auto))
 )
 
 (defrule Social_RPG
 (Recommended_Game_Type RPG)
 (User (Social y))
 =>
-(assert (Recommended_Game (Game Diablo_III)))
+(assert (Recommended_Game Diablo_III))
 )
 
 (defrule Mastery_RPG
 (Recommended_Game_Type RPG)
 (User (Mastery y))
 =>
-(assert (Recommended_Game (Game Dark_Soul_III)))
+(assert (Recommended_Game Dark_Soul_III))
 )
 
 
@@ -560,7 +560,7 @@
 (Recommended_Game_Type RPG)
 (User (Achievement y))
 =>
-(assert (Recommended_Game (Game Witcher_3)))
+(assert (Recommended_Game Witcher_3))
 )
 
 
@@ -568,27 +568,23 @@
 (Recommended_Game_Type RPG)
 (User (Immersion y))
 =>
-(assert (Recommended_Game (Game Final_Fantasy_Series)))
+(assert (Recommended_Game Final_Fantasy_Series))
 )
 
 (defrule Creativity_RPG
 (Recommended_Game_Type RPG)
 (User (Creativity y))
 =>
-(assert (Recommended_Game (Game Minecraft_Story_Mode)))
+(assert (Recommended_Game Minecraft_Story_Mode))
 )
 
 (defrule Print_Recommended_Game
 (declare (salience -1000))
-(Recommended_Game (Game ?Recommended_Game))
+(Recommended_Game ?Recommended_Game)
 =>
 (printout t "We recommend you "?Recommended_Game crlf)
 )
 
-;;(deffunction find-games ()
-;;(bind ?facts (find-all-facts ((?f Certainty_Factor)) (> ?f:cf 0.00)))
-;;)
-	
-(deffunction find-games-list ()
-	(bind ?facts (find-all-facts ((?f Recommended_Game)) (!= (str-compare ?f:Game "nil") 0)))
+(deffunction find-games ()
+	(bind ?facts (find-all-facts ((?f Certainty_Factor)) (> ?f:cf 0.00)))
 )

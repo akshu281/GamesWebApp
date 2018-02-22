@@ -1,3 +1,5 @@
+;How to use allowed symbols to restrict values for MBTI?
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Templates for certainty factor to work
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -8,6 +10,7 @@
 	
 (deftemplate Recommended_Game  
 	(slot Game))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; CF combination for multiple conclusions RULES
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -72,21 +75,16 @@
 	(slot MBTI3	)
 	(slot MBTI4	)
 	(slot MBTI_Com)
-	(slot Action)
-	(slot Social)
-	(slot Mastery)
-	(slot Achievement)
-	(slot Immersion)
-	(slot Creativity)
+	(slot FTS_Motivation)
+	(slot RPG_Motivation)
 )
 
 ;**** Rule 0: Assert fact Gender.
 (defrule Gender
-?gender <- (User (gender ?response))
 =>	
 (printout t crlf "Are you male or female (m/f)")
-;;(bind ?response (read))
-
+(bind ?response (read))
+(assert (User (gender ?response)))
 	(switch ?response
 	(case f then 	
 		(assert (Certainty_Factor (game_type RPG)		(cf 0.39)))
@@ -115,7 +113,7 @@
 		(assert (Certainty_Factor (game_type Simulation)(cf 0.12)))
 		(assert (Certainty_Factor (game_type Rhythm)	(cf 0.14))))
 )
-(modify ?gender (gender done))	
+	
 )
 
 ;**** Rule 1: Assert fact MBTI1.
@@ -125,8 +123,8 @@
 (MBTI1 nil)
 )
 =>	(printout t crlf "Are you outwardly or inwardly focused? (i/e)")
-	;;(bind ?response (read))
-	(modify ?MBTI1 (MBTI1 ?MBTI1))
+	(bind ?response (read))
+	(modify ?MBTI1 (MBTI1 ?response))
 )
 
 
@@ -138,8 +136,8 @@
 )
 =>
 (printout t crlf "How do you prefer to take in information? (s/n)")
-;;(bind ?response (read))
-(modify ?MBTI2 (MBTI2 ?MBTI2))
+(bind ?response (read))
+(modify ?MBTI2 (MBTI2 ?response))
 )
 
 ;**** Rule 3: Modify MBTI3 into same fact.
@@ -150,8 +148,8 @@
 )
 =>
 (printout t crlf "How do you prefer to make decisions? (t/f)")
-;;(bind ?response (read))
-(modify ?MBTI3 (MBTI3 ?MBTI3))
+(bind ?response (read))
+(modify ?MBTI3 (MBTI3 ?response))
 )
 
 ;**** Rule 4: Modify MBTI4 into same fact.
@@ -162,8 +160,8 @@
 )
 =>
 (printout t crlf "How do you prefer to live your outer life? (j/p)")
-;;(bind ?response (read))
-(modify ?MBTI4 (MBTI4 ?MBTI4))
+(bind ?response (read))
+(modify ?MBTI4 (MBTI4 ?response))
 )
 
 ;**** Rule 5: MBTI_Combined.
@@ -177,83 +175,13 @@
 )
 =>
 (printout t "Your MBTI is " ?MBTI1 ?MBTI2 ?MBTI3 ?MBTI4 crlf)
-(modify ?MBTI_Com (MBTI_Com ?MBTI_Com)))
+(modify ?MBTI_Com (MBTI_Com (sym-cat ?MBTI1 ?MBTI2 ?MBTI3 ?MBTI4))))
 
-;;;Ask for User Motivation
-
-(defrule Action
-?Action <- (User 
-(MBTI_Com ?MBTI_Com)
-(Action nil)
-)
-=>
-(printout t "You enjoy the excitement from chaotic and fast-pace games? (y/n)" crlf)
-;;(bind ?response (read))
-(modify ?Action (Action ?Action))
-)
-
-(defrule Social
-?Social <- (User 
-(Action ?Action)
-(Social nil)
-)
-=>
-(printout t "You like to play with others, as a team against other teams? (y/n)" crlf)
-;;(bind ?response (read))
-(modify ?Social (Social ?Social))
-)
-
-
-(defrule Mastery
-?Mastery <- (User 
-(Social ?Social)
-(Mastery nil)
-)
-=>
-(printout t "You enjoy strategic games which requires you to think ahead? (y/n)" crlf)
-;;(bind ?response (read))
-(modify ?Mastery (Mastery ?Mastery))
-)
-
-(defrule Achievement
-?Achievement <- (User 
-(Mastery ?Mastery)
-(Achievement nil)
-)
-=>
-(printout t "You gain satisfaction from collecting the best items in the game? (y/n)" crlf)
-;;(bind ?response (read))
-(modify ?Achievement (Achievement ?Achievement))
-)
-
-(defrule Immersion
-?Immersion <- (User 
-(Achievement ?Achievement)
-(Immersion nil)
-)
-=>
-(printout t "You enjoy games with elaborate plot and immerse yourself into the game? (y/n)" crlf)
-;;(bind ?response (read))
-(modify ?Immersion (Immersion ?Immersion))
-)
-
-
-(defrule Creativity
-?Creativity <- (User 
-(Immersion ?Immersion)
-(Creativity nil)
-)
-=>
-(printout t "You enjoy games which allows you to demonstrate your creativity? (y/n)" crlf)
-;;(bind ?response (read))
-(modify ?Creativity (Creativity ?Creativity))
-)
 
 ;**** Rule 6: Ask user MBTI1.
 (defrule MBTI_Com
-(User (MBTI_Com ?MBTI_Com))
+?DontLoop <- (User (MBTI_Com ?MBTI_Com))
 =>	
-;(printout t "Your Certainty_Factor has been determined" crlf ) 
 (switch ?MBTI_Com
 	(case istj then 	
 		(assert (Certainty_Factor (game_type RPG)		(cf 0.59)))
@@ -464,8 +392,12 @@
 		(assert (Certainty_Factor (game_type Simulation)(cf 0.50)))
 		(assert (Certainty_Factor (game_type Rhythm)	(cf 0.50))))
 )
+(modify ?DontLoop (MBTI_Com done))
 )
-;Find max cf among game types
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Find max cf among game types;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (deffunction my-predicate 
 (?cf1 ?cf2)
@@ -482,113 +414,157 @@
 (retract ?r1)
 )
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Ask what the user look for in shooter game;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+(defrule FTS_Motivation
+(declare (salience -3))
+(Recommended_Game_Type FTS)
+?FTS_Motivation <- (User 
+(FTS_Motivation nil)
+)
+=>
+(printout t "What do you look for in a shooter games? (Action/Social/Mastery/Achievement/Immersion/Creativity/Mobile)" crlf)
+(bind ?response (read))
+(modify ?FTS_Motivation (FTS_Motivation ?response))
+)
+
 ;;;;;;;;;;;;;;;
 ;Shooter Games;
 ;;;;;;;;;;;;;;;
 
 (defrule Action_Shooter
-(Recommended_Game_Type FTS)
-(User (Action y))
+?RGT <- (Recommended_Game_Type FTS)
+(User (FTS_Motivation Action))
 =>
 (assert (Recommended_Game (Game Call_of_Duty_WWII)))
+(retract ?RGT)
 )
 
 (defrule Social_Shooter
-(Recommended_Game_Type FTS)
-(User (Social y))
+?RGT <- (Recommended_Game_Type FTS)
+(User (FTS_Motivation Social))
 =>
 (assert (Recommended_Game (Game Overwatch)))
+(retract ?RGT)
 )
 
 (defrule Mastery_Shooter
-(Recommended_Game_Type FTS)
-(User (Mastery y))
+?RGT <- (Recommended_Game_Type FTS)
+(User (FTS_Motivation Mastery))
 =>
 (assert (Recommended_Game (Game Metal_Gear_Solid_V)))
+(retract ?RGT)
 )
 
 
 (defrule Achievement_Shooter
-(Recommended_Game_Type FTS)
-(User (Achievement y))
+?RGT <- (Recommended_Game_Type FTS)
+(User (FTS_Motivation Achievement))
 =>
 (assert (Recommended_Game (Game Destiny_2)))
+(retract ?RGT)
 )
 
 
 (defrule Immersion_Shooter
-(Recommended_Game_Type FTS)
-(User (Immersion y))
+?RGT <- (Recommended_Game_Type FTS)
+(User (FTS_Motivation Immersion))
 =>
 (assert (Recommended_Game (Game Bioshock_Infinite)))
+(retract ?RGT)
 )
 
 (defrule Creativity_Shooter
-(Recommended_Game_Type FTS)
-(User (Creativity y))
+?RGT <- (Recommended_Game_Type FTS)
+(User (FTS_Motivation Creativity))
 =>
 (assert (Recommended_Game (Game Portal_2)))
+(retract ?RGT)
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Ask what the user look for in RPG game;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+(defrule RPG_Motivation
+(declare (salience -3))
+(Recommended_Game_Type RPG)
+?RPG_Motivation <- (User 
+(RPG_Motivation nil)
+)
+=>
+(printout t "What do you look for in RPG game? (Action/Social/Mastery/Achievement/Immersion/Creativity/Mobile)" crlf)
+(bind ?response (read))
+(modify ?RPG_Motivation (RPG_Motivation ?response))
 )
 
 ;;;;;;;;;;;;;;;;;;;;
 ;Role-Playing Games;
 ;;;;;;;;;;;;;;;;;;;;
 
+
 (defrule Action_RPG
-(Recommended_Game_Type RPG)
-(User (Action y))
+?RGT <- (Recommended_Game_Type RPG)
+(User (RPG_Motivation Action))
 =>
 (assert (Recommended_Game (Game Grand_Theft_Auto)))
+(retract ?RGT)
 )
 
 (defrule Social_RPG
-(Recommended_Game_Type RPG)
-(User (Social y))
+?RGT <- (Recommended_Game_Type RPG)
+(User (RPG_Motivation Social))
 =>
 (assert (Recommended_Game (Game Diablo_III)))
+(retract ?RGT)
 )
 
 (defrule Mastery_RPG
-(Recommended_Game_Type RPG)
-(User (Mastery y))
+?RGT <- (Recommended_Game_Type RPG)
+(User (RPG_Motivation Mastery))
 =>
 (assert (Recommended_Game (Game Dark_Soul_III)))
+(retract ?RGT)
 )
 
 
 (defrule Achievement_RPG
-(Recommended_Game_Type RPG)
-(User (Achievement y))
+?RGT <- (Recommended_Game_Type RPG)
+(User (RPG_Motivation Achievement))
 =>
 (assert (Recommended_Game (Game Witcher_3)))
+(retract ?RGT)
 )
 
 
 (defrule Immersion_RPG
-(Recommended_Game_Type RPG)
-(User (Immersion y))
+?RGT <- (Recommended_Game_Type RPG)
+(User (RPG_Motivation Immersion))
 =>
 (assert (Recommended_Game (Game Final_Fantasy_Series)))
+(retract ?RGT)
 )
 
 (defrule Creativity_RPG
-(Recommended_Game_Type RPG)
-(User (Creativity y))
+?RGT <- (Recommended_Game_Type RPG)
+(User (RPG_Motivation Creativity))
 =>
 (assert (Recommended_Game (Game Minecraft_Story_Mode)))
+(retract ?RGT)
 )
+
+;;;;;;;;;;;;;;;
+;Print results;
+;;;;;;;;;;;;;;;
 
 (defrule Print_Recommended_Game
 (declare (salience -1000))
 (Recommended_Game (Game ?Recommended_Game))
 =>
 (printout t "We recommend you "?Recommended_Game crlf)
-)
-
-;;(deffunction find-games ()
-;;(bind ?facts (find-all-facts ((?f Certainty_Factor)) (> ?f:cf 0.00)))
-;;)
-	
-(deffunction find-games-list ()
-	(bind ?facts (find-all-facts ((?f Recommended_Game)) (!= (str-compare ?f:Game "nil") 0)))
 )
