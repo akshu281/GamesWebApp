@@ -9,7 +9,10 @@ $(document).ready(function () {
     $.material.init();
 
     /*  Activate the tooltips      */
-    $('[rel="tooltip"]').tooltip();
+   // $('[rel="tooltip"]').tooltip();
+    $(function () {
+    	  $('[data-toggle="tooltip"]').tooltip()
+    	})
 
     // Code for the Validator
     var $validator = $('.wizard-card form').validate({
@@ -78,12 +81,17 @@ $(document).ready(function () {
                
                 var isChecked = $("#games input[name=optradio0]:checked").val();
                 console.log(isChecked);
-                if (isChecked!='y'||'n') {
-                    alert('Nothing Selected');
-                } else {
-                    alert('You have selected :' + isChecked);
-                }
-                
+               
+            //    if (isChecked!='y'||'n'||'f'||'m') 
+                if(isChecked=="undefined")
+                {
+                    alert('Please select choices for all the questions');
+                    console.log(ischecked);
+                    return false;
+                } 
+                //else {
+                  //  alert('You have selected :' + isChecked);
+               // }
                 var optradio0 = $("#games input[name=optradio0]:checked").val();
                 var optradio = $("#games input[name=optradio]:checked").val();
                 var optradio1 = $("#games input[name=optradio1]:checked").val();
@@ -107,9 +115,10 @@ $(document).ready(function () {
                         console.log('Success of Asserting Facts from Wiz 1');
                         // $("#games textarea[name=resultarea]").val(result);
                     }
-
-                });
-            } else if (index == 2) {
+                
+                }); 
+            } 
+                else if (index == 2) {
                 var optradio4 = $("#games input[name=optradio4]:checked").val();
                 var optradio5 = $("#games input[name=optradio5]:checked").val();
                 var optradio6 = $("#games input[name=optradio6]:checked").val();
