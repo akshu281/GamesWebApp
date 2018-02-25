@@ -17,13 +17,13 @@ $(document).ready(function () {
     // Code for the Validator
     var $validator = $('.wizard-card form').validate({
         rules: {
-            /*  optradio0: {
+             optradio0: {
                   required: true
               },
               optradio: {
                   required: true
               },
-              optradio1: {
+             optradio1: {
                   required: true
               },
               optradio2: {
@@ -34,7 +34,7 @@ $(document).ready(function () {
               },
                 optradio4: {
                      required: true
-                 },
+                },
                  optradio5: {
                      required: true
                  },
@@ -49,7 +49,7 @@ $(document).ready(function () {
                  },
                  optradio9: {
                      required: true
-                 },*/
+                 }
         },
         errorPlacement: function (error, element) {
             $(element).parent('div').addClass('has-error');
@@ -79,16 +79,18 @@ $(document).ready(function () {
             //Index to select which tab is being selected
             if (index == 1) {
                
-                var isChecked = $("#games input[name=optradio0]:checked").val();
-                console.log(isChecked);
-               
-            //    if (isChecked!='y'||'n'||'f'||'m') 
-                if(isChecked=="undefined")
+              //  var isChecked = $("#games input[name=optradio0]:checked").val();
+              //  console.log(isChecked);
+             //  var boolean= isChecked=='m'||isChecked=='f';
+            //   console.log($('#optradio0').val());
+            //   console.log($('#optradio').val());
+               //if (isChecked!='m'||isChecked!='f') 
+            /*   if(!$('#optradio0').val())
                 {
                     alert('Please select choices for all the questions');
                     console.log(ischecked);
                     return false;
-                } 
+                } */
                 //else {
                   //  alert('You have selected :' + isChecked);
                // }
