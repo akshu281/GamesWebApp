@@ -177,23 +177,19 @@
 (modify ?MBTI4 (MBTI4 ?MBTI4))
 )
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; Concatenation done in JAVA
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ;**** Rule 5: MBTI_Combined.
-;(defrule MBTI_Combined
-;?MBTI_Com <- (User 
-;(MBTI1 ?MBTI1)
-;(MBTI2 ?MBTI2)
-;(MBTI3 ?MBTI3)
-;(MBTI4 ?MBTI4)
-;(MBTI_Com nil)
-;)
-;=>
+(defrule MBTI_Combined
+?MBTI_Com <- (User 
+(MBTI1 ?MBTI1)
+(MBTI2 ?MBTI2)
+(MBTI3 ?MBTI3)
+(MBTI4 ?MBTI4)
+(MBTI_Com nil)
+)
+=>
 ;(printout t "Your MBTI is " ?MBTI1 ?MBTI2 ?MBTI3 ?MBTI4 crlf)
-;(modify ?MBTI_Com (MBTI_Com ?MBTI_Com)))
-
+(modify ?MBTI_Com (MBTI_Com ?MBTI_Com))
+)
 
 ;**** Rule 6: assert MBTI cf.
 (defrule MBTI_Com
@@ -423,7 +419,7 @@
 (Action nil)
 )
 =>
-(printout t "You enjoy the excitement from chaotic and fast-pace games? (y/n)" crlf)
+(printout t "Does either of the following game type appeal to you: “Fast-Paced Action” or “Destruction”?  (y/n)" crlf)
 ;;(bind ?response (read))
 (modify ?Action (Action ?Action))
 )
@@ -434,7 +430,7 @@
 (Social nil)
 )
 =>
-(printout t "You like to play with others, as a team against other teams? (y/n)" crlf)
+(printout t "Do you like games that has teamwork or competing with others? (y/n)" crlf)
 ;;(bind ?response (read))
 (modify ?Social (Social ?Social))
 )
@@ -445,7 +441,7 @@
 (Mastery nil)
 )
 =>
-(printout t "You enjoy strategic games which requires you to think ahead? (y/n)" crlf)
+(printout t "How about games that are hard to be master or requires you to ponder and think ahead? (y/n)" crlf)
 ;;(bind ?response (read))
 (modify ?Mastery (Mastery ?Mastery))
 )
@@ -456,7 +452,7 @@
 (Achievement nil)
 )
 =>
-(printout t "You gain satisfaction from collecting the best items in the game? (y/n)" crlf)
+(printout t "Do you like to complete every single possible quest/ achievement or acquire powerful skills and gears?  (y/n)" crlf)
 ;;(bind ?response (read))
 (modify ?Achievement (Achievement ?Achievement))
 )
@@ -467,7 +463,7 @@
 (Immersion nil)
 )
 =>
-(printout t "You enjoy games with elaborate plot and immerse yourself into the game? (y/n)" crlf)
+(printout t "Is a Fantasy Setting or Strong Storyline a must have for you? (y/n)" crlf)
 ;;(bind ?response (read))
 (modify ?Immersion (Immersion ?Immersion))
 )
@@ -478,7 +474,7 @@
 (Creativity nil)
 )
 =>
-(printout t "You enjoy games which allows you to demonstrate your creativity? (y/n)" crlf)
+(printout t "Finally, is it preferred for the game to have your own personal touch or open to experimentation? (y/n)" crlf)
 ;;(bind ?response (read))
 (modify ?Creativity (Creativity ?Creativity))
 )
@@ -679,6 +675,735 @@
 =>
 (assert (Recommended_Game (Game Minecraft_Story_Mode)))
 )
+
+
+;;;;;;;;;;;;;;;
+;Platform
+;;;;;;;;;;;;;;;
+
+(defrule Action_Platform
+(or 
+(Recommended_Game_Type (rg1 Platform))
+(Recommended_Game_Type (rg2 Platform))
+(Recommended_Game_Type (rg3 Platform))
+)
+(User (Action y))
+=>
+(assert (Recommended_Game (Game Unbox_Newbie_Adventure)))
+)
+
+(defrule Social_Platform
+(or 
+(Recommended_Game_Type (rg1 Platform))
+(Recommended_Game_Type (rg2 Platform))
+(Recommended_Game_Type (rg3 Platform))
+)
+(User (Social y))
+=>
+(assert (Recommended_Game (Game Trine_2_Complete_Story)))
+)
+
+(defrule Mastery_Platform
+(or 
+(Recommended_Game_Type (rg1 Platform))
+(Recommended_Game_Type (rg2 Platform))
+(Recommended_Game_Type (rg3 Platform))
+)
+(User (Mastery y))
+=>
+(assert (Recommended_Game (Game Getting_Over_It_with_Bennett_Foddy)))
+)
+
+
+(defrule Achievement_Platform
+(or 
+(Recommended_Game_Type (rg1 Platform))
+(Recommended_Game_Type (rg2 Platform))
+(Recommended_Game_Type (rg3 Platform))
+)
+(User (Achievement y))
+=>
+(assert (Recommended_Game (Game Hollow_Knight)))
+)
+
+
+(defrule Immersion_Platform
+(or 
+(Recommended_Game_Type (rg1 Platform))
+(Recommended_Game_Type (rg2 Platform))
+(Recommended_Game_Type (rg3 Platform))
+)
+(User (Immersion y))
+=>
+(assert (Recommended_Game (Game Night_in_the_wood)))
+)
+
+(defrule Creativity_Platform
+(or 
+(Recommended_Game_Type (rg1 Platform))
+(Recommended_Game_Type (rg2 Platform))
+(Recommended_Game_Type (rg3 Platform))
+)
+(User (Creativity y))
+=>
+(assert (Recommended_Game (Game Human_Fall_Flat)))
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Turn-Based Strategy
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule Action_TBS
+(or 
+(Recommended_Game_Type (rg1 TBS))
+(Recommended_Game_Type (rg2 TBS))
+(Recommended_Game_Type (rg3 TBS))
+)
+(User (Action y))
+=>
+(assert (Recommended_Game (Game Total_War_Series)))
+)
+
+(defrule Social_TBS
+(or 
+(Recommended_Game_Type (rg1 TBS))
+(Recommended_Game_Type (rg2 TBS))
+(Recommended_Game_Type (rg3 TBS))
+)
+(User (Social y))
+=>
+(assert (Recommended_Game (Game Gremlins_Inc)))
+)
+
+(defrule Mastery_TBS
+(or 
+(Recommended_Game_Type (rg1 TBS))
+(Recommended_Game_Type (rg2 TBS))
+(Recommended_Game_Type (rg3 TBS))
+)
+(User (Mastery y))
+=>
+(assert (Recommended_Game (Game Civilization)))
+)
+
+
+(defrule Achievement_TBS
+(or 
+(Recommended_Game_Type (rg1 TBS))
+(Recommended_Game_Type (rg2 TBS))
+(Recommended_Game_Type (rg3 TBS))
+)
+(User (Achievement y))
+=>
+(assert (Recommended_Game (Game XCOM2)))
+)
+
+
+(defrule Immersion_TBS
+(or 
+(Recommended_Game_Type (rg1 TBS))
+(Recommended_Game_Type (rg2 TBS))
+(Recommended_Game_Type (rg3 TBS))
+)
+(User (Immersion y))
+=>
+(assert (Recommended_Game (Game Final_Fantasy_Tactics)))
+)
+
+(defrule Creativity_TBS
+(or 
+(Recommended_Game_Type (rg1 TBS))
+(Recommended_Game_Type (rg2 TBS))
+(Recommended_Game_Type (rg3 TBS))
+)
+(User (Creativity y))
+=>
+(assert (Recommended_Game (Game Divinity_Original_Sin_2)))
+)
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;MMORPG
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule Action_MMORPG
+(or 
+(Recommended_Game_Type (rg1 MMORPG))
+(Recommended_Game_Type (rg2 MMORPG))
+(Recommended_Game_Type (rg3 MMORPG))
+)
+(User (Action y))
+=>
+(assert (Recommended_Game (Game Path_of_Exile)))
+)
+
+(defrule Social_MMORPG
+(or 
+(Recommended_Game_Type (rg1 MMORPG))
+(Recommended_Game_Type (rg2 MMORPG))
+(Recommended_Game_Type (rg3 MMORPG))
+)
+(User (Social y))
+=>
+(assert (Recommended_Game (Game Shakes_and_Fidget)))
+)
+
+(defrule Mastery_MMORPG
+(or 
+(Recommended_Game_Type (rg1 MMORPG))
+(Recommended_Game_Type (rg2 MMORPG))
+(Recommended_Game_Type (rg3 MMORPG))
+)
+(User (Mastery y))
+=>
+(assert (Recommended_Game (Game Anarchy_Online)))
+)
+
+
+(defrule Achievement_MMORPG
+(or 
+(Recommended_Game_Type (rg1 MMORPG))
+(Recommended_Game_Type (rg2 MMORPG))
+(Recommended_Game_Type (rg3 MMORPG))
+)
+(User (Achievement y))
+=>
+(assert (Recommended_Game (Game World_of_Warcraft)))
+)
+
+
+(defrule Immersion_MMORPG
+(or 
+(Recommended_Game_Type (rg1 MMORPG))
+(Recommended_Game_Type (rg2 MMORPG))
+(Recommended_Game_Type (rg3 MMORPG))
+)
+(User (Immersion y))
+=>
+(assert (Recommended_Game (Game FINAL_FANTASY_XIV)))
+)
+
+(defrule Creativity_MMORPG
+(or 
+(Recommended_Game_Type (rg1 MMORPG))
+(Recommended_Game_Type (rg2 MMORPG))
+(Recommended_Game_Type (rg3 MMORPG))
+)
+(User (Creativity y))
+=>
+(assert (Recommended_Game (Game Chronicles_of_Elyria)))
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;RTS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule Action_RTS
+(or 
+(Recommended_Game_Type (rg1 RTS))
+(Recommended_Game_Type (rg2 RTS))
+(Recommended_Game_Type (rg3 RTS))
+)
+(User (Action y))
+=>
+(assert (Recommended_Game (Game Supreme_Commander)))
+)
+
+(defrule Social_RTS
+(or 
+(Recommended_Game_Type (rg1 RTS))
+(Recommended_Game_Type (rg2 RTS))
+(Recommended_Game_Type (rg3 RTS))
+)
+(User (Social y))
+=>
+(assert (Recommended_Game (Game Starcraft_II)))
+)
+
+(defrule Mastery_RTS
+(or 
+(Recommended_Game_Type (rg1 RTS))
+(Recommended_Game_Type (rg2 RTS))
+(Recommended_Game_Type (rg3 RTS))
+)
+(User (Mastery y))
+=>
+(assert (Recommended_Game (Game Shadow_Tactics_Blades_of_the_Shogun)))
+)
+
+
+(defrule Achievement_RTS
+(or 
+(Recommended_Game_Type (rg1 RTS))
+(Recommended_Game_Type (rg2 RTS))
+(Recommended_Game_Type (rg3 RTS))
+)
+(User (Achievement y))
+=>
+(assert (Recommended_Game (Game Warhammer_40000)))
+)
+
+
+(defrule Immersion_RTS
+(or 
+(Recommended_Game_Type (rg1 RTS))
+(Recommended_Game_Type (rg2 RTS))
+(Recommended_Game_Type (rg3 RTS))
+)
+(User (Immersion y))
+=>
+(assert (Recommended_Game (Game Crusader_Kings_II)))
+)
+
+(defrule Creativity_RTS
+(or 
+(Recommended_Game_Type (rg1 RTS))
+(Recommended_Game_Type (rg2 RTS))
+(Recommended_Game_Type (rg3 RTS))
+)
+(User (Creativity y))
+=>
+(assert (Recommended_Game (Game Stellaris)))
+)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Racing
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule Action_Racing
+(or 
+(Recommended_Game_Type (rg1 Racing))
+(Recommended_Game_Type (rg2 Racing))
+(Recommended_Game_Type (rg3 Racing))
+)
+(User (Action y))
+=>
+(assert (Recommended_Game (Game Burnout)))
+)
+
+(defrule Social_Racing
+(or 
+(Recommended_Game_Type (rg1 Racing))
+(Recommended_Game_Type (rg2 Racing))
+(Recommended_Game_Type (rg3 Racing))
+)
+(User (Social y))
+=>
+(assert (Recommended_Game (Game Mario_Kart)))
+)
+
+(defrule Mastery_Racing
+(or 
+(Recommended_Game_Type (rg1 Racing))
+(Recommended_Game_Type (rg2 Racing))
+(Recommended_Game_Type (rg3 Racing))
+)
+(User (Mastery y))
+=>
+(assert (Recommended_Game (Game F1_2017)))
+)
+
+
+(defrule Achievement_Racing
+(or 
+(Recommended_Game_Type (rg1 Racing))
+(Recommended_Game_Type (rg2 Racing))
+(Recommended_Game_Type (rg3 Racing))
+)
+(User (Achievement y))
+=>
+(assert (Recommended_Game (Game Forza_Horizon_3)))
+)
+
+
+(defrule Immersion_Racing
+(or 
+(Recommended_Game_Type (rg1 Racing))
+(Recommended_Game_Type (rg2 Racing))
+(Recommended_Game_Type (rg3 Racing))
+)
+(User (Immersion y))
+=>
+(assert (Recommended_Game (Game Shift_2)))
+)
+
+(defrule Creativity_Racing
+(or 
+(Recommended_Game_Type (rg1 Racing))
+(Recommended_Game_Type (rg2 Racing))
+(Recommended_Game_Type (rg3 Racing))
+)
+(User (Creativity y))
+=>
+(assert (Recommended_Game (Game Trailmakers)))
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Simulation
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule Action_Simulation
+(or 
+(Recommended_Game_Type (rg1 Simulation))
+(Recommended_Game_Type (rg2 Simulation))
+(Recommended_Game_Type (rg3 Simulation))
+)
+(User (Action y))
+=>
+(assert (Recommended_Game (Game RimWorld)))
+)
+
+(defrule Social_Simulation
+(or 
+(Recommended_Game_Type (rg1 Simulation))
+(Recommended_Game_Type (rg2 Simulation))
+(Recommended_Game_Type (rg3 Simulation))
+)
+(User (Social y))
+=>
+(assert (Recommended_Game (Game Tropico_5)))
+)
+
+(defrule Mastery_Simulation
+(or 
+(Recommended_Game_Type (rg1 Simulation))
+(Recommended_Game_Type (rg2 Simulation))
+(Recommended_Game_Type (rg3 Simulation))
+)
+(User (Mastery y))
+=>
+(assert (Recommended_Game (Game Rise_to_Ruins)))
+)
+
+
+(defrule Achievement_Simulation
+(or 
+(Recommended_Game_Type (rg1 Simulation))
+(Recommended_Game_Type (rg2 Simulation))
+(Recommended_Game_Type (rg3 Simulation))
+)
+(User (Achievement y))
+=>
+(assert (Recommended_Game (Game Harvest_Moon)))
+)
+
+
+(defrule Immersion_Simulation
+(or 
+(Recommended_Game_Type (rg1 Simulation))
+(Recommended_Game_Type (rg2 Simulation))
+(Recommended_Game_Type (rg3 Simulation))
+)
+(User (Immersion y))
+=>
+(assert (Recommended_Game (Game This_War_of_Mine)))
+)
+
+(defrule Creativity_Simulation
+(or 
+(Recommended_Game_Type (rg1 Simulation))
+(Recommended_Game_Type (rg2 Simulation))
+(Recommended_Game_Type (rg3 Simulation))
+)
+(User (Creativity y))
+=>
+(assert (Recommended_Game (Game The_Sims_4)))
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;MOBA
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule Action_MOBA
+(or 
+(Recommended_Game_Type (rg1 MOBA))
+(Recommended_Game_Type (rg2 MOBA))
+(Recommended_Game_Type (rg3 MOBA))
+)
+(User (Action y))
+=>
+(assert (Recommended_Game (Game Corroded)))
+)
+
+(defrule Social_MOBA
+(or 
+(Recommended_Game_Type (rg1 MOBA))
+(Recommended_Game_Type (rg2 MOBA))
+(Recommended_Game_Type (rg3 MOBA))
+)
+(User (Social y))
+=>
+(assert (Recommended_Game (Game Strife)))
+)
+
+(defrule Mastery_MOBA
+(or 
+(Recommended_Game_Type (rg1 MOBA))
+(Recommended_Game_Type (rg2 MOBA))
+(Recommended_Game_Type (rg3 MOBA))
+)
+(User (Mastery y))
+=>
+(assert (Recommended_Game (Game Dota_2)))
+)
+
+
+(defrule Achievement_MOBA
+(or 
+(Recommended_Game_Type (rg1 MOBA))
+(Recommended_Game_Type (rg2 MOBA))
+(Recommended_Game_Type (rg3 MOBA))
+)
+(User (Achievement y))
+=>
+(assert (Recommended_Game (Game Atlas_Reactor)))
+)
+
+
+(defrule Immersion_MOBA
+(or 
+(Recommended_Game_Type (rg1 MOBA))
+(Recommended_Game_Type (rg2 MOBA))
+(Recommended_Game_Type (rg3 MOBA))
+)
+(User (Immersion y))
+=>
+(assert (Recommended_Game (Game Battlerite)))
+)
+
+(defrule Creativity_MOBA
+(or 
+(Recommended_Game_Type (rg1 MOBA))
+(Recommended_Game_Type (rg2 MOBA))
+(Recommended_Game_Type (rg3 MOBA))
+)
+(User (Creativity y))
+=>
+(assert (Recommended_Game (Game Smite)))
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Puzzle
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule Action_Puzzle
+(or 
+(Recommended_Game_Type (rg1 Puzzle))
+(Recommended_Game_Type (rg2 Puzzle))
+(Recommended_Game_Type (rg3 Puzzle))
+)
+(User (Action y))
+=>
+(assert (Recommended_Game (Game Little_Inferno)))
+)
+
+(defrule Social_Puzzle
+(or 
+(Recommended_Game_Type (rg1 Puzzle))
+(Recommended_Game_Type (rg2 Puzzle))
+(Recommended_Game_Type (rg3 Puzzle))
+)
+(User (Social y))
+=>
+(assert (Recommended_Game (Game Fat_Mask)))
+)
+
+(defrule Mastery_Puzzle
+(or 
+(Recommended_Game_Type (rg1 Puzzle))
+(Recommended_Game_Type (rg2 Puzzle))
+(Recommended_Game_Type (rg3 Puzzle))
+)
+(User (Mastery y))
+=>
+(assert (Recommended_Game (Game World_of_Goo)))
+)
+
+
+(defrule Achievement_Puzzle
+(or 
+(Recommended_Game_Type (rg1 Puzzle))
+(Recommended_Game_Type (rg2 Puzzle))
+(Recommended_Game_Type (rg3 Puzzle))
+)
+(User (Achievement y))
+=>
+(assert (Recommended_Game (Game Gorogoa)))
+)
+
+
+(defrule Immersion_Puzzle
+(or 
+(Recommended_Game_Type (rg1 Puzzle))
+(Recommended_Game_Type (rg2 Puzzle))
+(Recommended_Game_Type (rg3 Puzzle))
+)
+(User (Immersion y))
+=>
+(assert (Recommended_Game (Game Inside)))
+)
+
+(defrule Creativity_Puzzle
+(or 
+(Recommended_Game_Type (rg1 Puzzle))
+(Recommended_Game_Type (rg2 Puzzle))
+(Recommended_Game_Type (rg3 Puzzle))
+)
+(User (Creativity y))
+=>
+(assert (Recommended_Game (Game Scribblenauts_Unlimited)))
+)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Rhythm
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule Action_Rhythm
+(or 
+(Recommended_Game_Type (rg1 Rhythm))
+(Recommended_Game_Type (rg2 Rhythm))
+(Recommended_Game_Type (rg3 Rhythm))
+)
+(User (Action y))
+=>
+(assert (Recommended_Game (Game One_Finger_Death_Punch)))
+)
+
+(defrule Social_Rhythm
+(or 
+(Recommended_Game_Type (rg1 Rhythm))
+(Recommended_Game_Type (rg2 Rhythm))
+(Recommended_Game_Type (rg3 Rhythm))
+)
+(User (Social y))
+=>
+(assert (Recommended_Game (Game The_Metronomicon)))
+)
+
+(defrule Mastery_Rhythm
+(or 
+(Recommended_Game_Type (rg1 Rhythm))
+(Recommended_Game_Type (rg2 Rhythm))
+(Recommended_Game_Type (rg3 Rhythm))
+)
+(User (Mastery y))
+=>
+(assert (Recommended_Game (Game Super_Hexagon)))
+)
+
+
+(defrule Achievement_Rhythm
+(or 
+(Recommended_Game_Type (rg1 Rhythm))
+(Recommended_Game_Type (rg2 Rhythm))
+(Recommended_Game_Type (rg3 Rhythm))
+)
+(User (Achievement y))
+=>
+(assert (Recommended_Game (Game Aaero)))
+)
+
+
+(defrule Immersion_Rhythm
+(or 
+(Recommended_Game_Type (rg1 Rhythm))
+(Recommended_Game_Type (rg2 Rhythm))
+(Recommended_Game_Type (rg3 Rhythm))
+)
+(User (Immersion y))
+=>
+(assert (Recommended_Game (Game Crypt_of_the_NecroDancer)))
+)
+
+(defrule Creativity_Rhythm
+(or 
+(Recommended_Game_Type (rg1 Rhythm))
+(Recommended_Game_Type (rg2 Rhythm))
+(Recommended_Game_Type (rg3 Rhythm))
+)
+(User (Creativity y))
+=>
+(assert (Recommended_Game (Game Airtone)))
+)
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Sports
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule Action_Sports
+(or 
+(Recommended_Game_Type (rg1 Sports))
+(Recommended_Game_Type (rg2 Sports))
+(Recommended_Game_Type (rg3 Sports))
+)
+(User (Action y))
+=>
+(assert (Recommended_Game (Game Mutant_Football_League)))
+)
+
+(defrule Social_Sports
+(or 
+(Recommended_Game_Type (rg1 Sports))
+(Recommended_Game_Type (rg2 Sports))
+(Recommended_Game_Type (rg3 Sports))
+)
+(User (Social y))
+=>
+(assert (Recommended_Game (Game Rocket_League)))
+)
+
+(defrule Mastery_Sports
+(or 
+(Recommended_Game_Type (rg1 Sports))
+(Recommended_Game_Type (rg2 Sports))
+(Recommended_Game_Type (rg3 Sports))
+)
+(User (Mastery y))
+=>
+(assert (Recommended_Game (Game Lethal_League)))
+)
+
+
+(defrule Achievement_Sports
+(or 
+(Recommended_Game_Type (rg1 Sports))
+(Recommended_Game_Type (rg2 Sports))
+(Recommended_Game_Type (rg3 Sports))
+)
+(User (Achievement y))
+=>
+(assert (Recommended_Game (Game Football_Manager)))
+)
+
+
+(defrule Immersion_Sports
+(or 
+(Recommended_Game_Type (rg1 Sports))
+(Recommended_Game_Type (rg2 Sports))
+(Recommended_Game_Type (rg3 Sports))
+)
+(User (Immersion y))
+=>
+(assert (Recommended_Game (Game Behold_the_Kickmen)))
+)
+
+(defrule Creativity_Sports
+(or 
+(Recommended_Game_Type (rg1 Sports))
+(Recommended_Game_Type (rg2 Sports))
+(Recommended_Game_Type (rg3 Sports))
+)
+(User (Creativity y))
+=>
+(assert (Recommended_Game (Game Superflight)))
+)
+
+
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

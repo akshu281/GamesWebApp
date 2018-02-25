@@ -53,6 +53,7 @@ $(document).ready(function () {
         },
         errorPlacement: function (error, element) {
             $(element).parent('div').addClass('has-error');
+            alert('Please select all the options')
         }
     });
 
@@ -69,31 +70,7 @@ $(document).ready(function () {
                 $validator.focusInvalid();
                 return false;
             }
-
-            // Write if else and two ajax calls to differentiate wizards and its respective data !
-
-            // var tabs = $(".tab-pane");
-            // var currenttab= tabs[index-1];
-            //var currenttab = $(e.target).text();
-            // console.log("Tab Selected:" + index);
-            //Index to select which tab is being selected
             if (index == 1) {
-               
-              //  var isChecked = $("#games input[name=optradio0]:checked").val();
-              //  console.log(isChecked);
-             //  var boolean= isChecked=='m'||isChecked=='f';
-            //   console.log($('#optradio0').val());
-            //   console.log($('#optradio').val());
-               //if (isChecked!='m'||isChecked!='f') 
-            /*   if(!$('#optradio0').val())
-                {
-                    alert('Please select choices for all the questions');
-                    console.log(ischecked);
-                    return false;
-                } */
-                //else {
-                  //  alert('You have selected :' + isChecked);
-               // }
                 var optradio0 = $("#games input[name=optradio0]:checked").val();
                 var optradio = $("#games input[name=optradio]:checked").val();
                 var optradio1 = $("#games input[name=optradio1]:checked").val();
@@ -115,8 +92,7 @@ $(document).ready(function () {
                     success: function (result) {
                         console.log(result);
                         console.log('Success of Asserting Facts from Wiz 1');
-                        // $("#games textarea[name=resultarea]").val(result);
-                    }
+                                        }
                 
                 }); 
             } 
@@ -131,7 +107,6 @@ $(document).ready(function () {
                 console.log(inputfacts1);
                 $.ajax({
                     url: baseUrl,
-                    //url: '/GamesWebApp/User/assertfacts',
                     type: "POST",
                     data: {
                         action: "gametype",
@@ -141,8 +116,7 @@ $(document).ready(function () {
                     success: function (result) {
                         console.log(result);
                         console.log('Success of Asserting Facts from Wiz 2');
-                        // $("#games textarea[name=resultarea]").val(result);
-                    }
+                              }
 
                 });
             }
@@ -219,25 +193,18 @@ $(document).ready(function () {
             console.log("inside finish func");
             $.ajax({
                 url: baseUrl,
-                // url: '/GamesWebApp/gametype/submitfacts',
                 type: "GET",
                 data: {
                     action: "finish",
                 },
                 success: function (result) {
                     console.log(result);
-                    // $("#games input[name=resultarea]").val(result);
                     $("#games textarea[name=resultarea]").val(result);
                 }
             });
         });
     }
 
-
-    // Prepare the preview for profile picture
-    $("#wizard-picture").change(function () {
-        readURL(this);
-    });
 
     $('[data-toggle="wizard-radio"]').click(function () {
         wizard = $(this).closest('.wizard-card');
@@ -261,19 +228,6 @@ $(document).ready(function () {
 
 });
 
-
-//Function to show image before upload
-
-function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-
-        reader.onload = function (e) {
-            $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
-        }
-        reader.readAsDataURL(input.files[0]);
-    }
-}
 
 $(window).resize(function () {
     $('.wizard-card').each(function () {

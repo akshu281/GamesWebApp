@@ -46,11 +46,6 @@ public class GamesServlet extends HttpServlet {
 		try {
 			clips=new Environment();
 			System.out.println("Opening Templates File in next step");
-			//String templates=loadResourceFile(servletContext, "templates.clp");
-			//clips.loadFromString(templates);
-			//clips.run();
-			//clips.loadFromResource("D:\\GamesWebApp\\\\WebContent\\\\WEB-INF\\\\clips\\\\templates.clp");
-			//clips.loadFromResource("D:\\GamesWebApp\\WebContent\\WEB-INF\\clips\\rules.clp");
 			System.out.println("Opening Rules File in next step");
 			String rules=loadResourceFile(servletContext, "rule.clp");
 			clips.reset();
@@ -68,15 +63,15 @@ public class GamesServlet extends HttpServlet {
 	public static String loadResourceFile(ServletContext context,String filename) {
 		 System.out.println("loading from resource file");
 		 try {
-			InputStream s=context.getResourceAsStream("/WEB-INF/clips/"+filename);
+			InputStream is=context.getResourceAsStream("/WEB-INF/clips/"+filename);
 			String clipsinfo="";
-			int c=s.read();
+			int c=is.read();
 			while(c!=-1) {
 				clipsinfo+=(char)c;
-				c=(int)s.read();
+				c=(int)is.read();
 				
 			}
-			s.close();
+			is.close();
 			System.out.println(clipsinfo);
 			return clipsinfo;
 		 }
@@ -91,8 +86,6 @@ public class GamesServlet extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		//doGet(req, resp);
-		//String [] URLSplits=req.getRequestURI().split("/");
 		
         String action = req.getParameter("action");
         if (action == null) {
@@ -116,23 +109,9 @@ public class GamesServlet extends HttpServlet {
         		String mbti3="(MBTI3 "+inputsplits1[4]+")";
         		String mbti4="(MBTI4 "+inputsplits1[5]+")";
         		String mbti_Com="(MBTI_Com "+inputsplits1[2]+inputsplits1[3]+inputsplits1[4]+inputsplits1[5]+")";
-        		//String game_type="(Certainty_Factor (game_type nil)";
-        		//String cf="(cf nil))";
-        		//String data_to_assert=gender+mbti1+mbti2+mbti3+mbti4+mbti_Com+game_type+cf;
         		datatoassert=gender+mbti1+mbti2+mbti3+mbti4+mbti_Com;
-        		//String datatoassert=gender+")";
-        		
-        	/*	if(inputsplits1[0].equals("User"))			//To check if its of User template
-        		{
-        			//	if(addfacts(clips,req.getParameter("data")))	
-        			System.out.println("Matched User template and about to call addfacts function for personality");
-        			if(addfacts(clips,data_to_assert))
-        				resp.getWriter().append("Success Post");
-        			else {
-        				resp.getWriter().append("Failure Post");
-        				}
-        		}  //End of Wiz 1 */
             }
+
         
         	else if (action.equals("gametype"))
             {
@@ -147,7 +126,6 @@ public class GamesServlet extends HttpServlet {
         		
         		
         		String actiondata1="(Action "+inputsplits1[1]+")";
-        		//String actiondata="(User (Action "+inputsplits1[1]+")"; //Included to form an assertstring format
         		String social="(Social "+inputsplits1[2]+")";
         		String mastery="(Mastery "+inputsplits1[3]+")";
         		String achievement="(Achievement "+inputsplits1[4]+")";
