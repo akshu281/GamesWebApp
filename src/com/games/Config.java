@@ -10,8 +10,7 @@ public class Config implements ServletContextListener {
 	public static ServletContext servletContext=null;
     @Override
     public void contextInitialized(ServletContextEvent event) {
-//        ServletContext servletContext = event.getServletContext(); 
-        System.out.println("Configuration servlet");
+      ServletContext servletContext = event.getServletContext(); 
         servletContext=event.getServletContext();
               
     }
