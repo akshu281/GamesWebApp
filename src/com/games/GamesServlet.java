@@ -45,7 +45,6 @@ public class GamesServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		try {
 			clips=new Environment();
-			System.out.println("Opening Templates File in next step");
 			System.out.println("Opening Rules File in next step");
 			String rules=loadResourceFile(servletContext, "rule.clp");
 			clips.reset();
@@ -63,15 +62,15 @@ public class GamesServlet extends HttpServlet {
 	public static String loadResourceFile(ServletContext context,String filename) {
 		 System.out.println("loading from resource file");
 		 try {
-			InputStream is=context.getResourceAsStream("/WEB-INF/clips/"+filename);
+			InputStream ist=context.getResourceAsStream("/WEB-INF/clips/"+filename);
 			String clipsinfo="";
-			int c=is.read();
+			int c=ist.read();
 			while(c!=-1) {
 				clipsinfo+=(char)c;
-				c=(int)is.read();
+				c=(int)ist.read();
 				
 			}
-			is.close();
+			ist.close();
 			System.out.println(clipsinfo);
 			return clipsinfo;
 		 }

@@ -11,7 +11,11 @@ $(document).ready(function () {
     /*  Activate the tooltips      */
    // $('[rel="tooltip"]').tooltip();
     $(function () {
-    	  $('[data-toggle="tooltip"]').tooltip()
+    	  $('[data-toggle="tooltip"]').tooltip(
+              {container: 'body',
+               // width: 900,
+            }
+          )
     	})
 
     // Code for the Validator
@@ -53,7 +57,7 @@ $(document).ready(function () {
         },
         errorPlacement: function (error, element) {
             $(element).parent('div').addClass('has-error');
-            alert('Please select all the options')
+           // alert('Please select all the options')
         }
     });
 

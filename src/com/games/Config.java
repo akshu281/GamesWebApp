@@ -9,8 +9,7 @@ import javax.servlet.annotation.WebListener;
 public class Config implements ServletContextListener {
 	public static ServletContext servletContext=null;
     @Override
-    public void contextInitialized(ServletContextEvent event) {
-      ServletContext servletContext = event.getServletContext(); 
+    public void contextInitialized(ServletContextEvent event) { 
         servletContext=event.getServletContext();
               
     }

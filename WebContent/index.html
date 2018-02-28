@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Games Recommendation System</title>
+	<title>Games Expert System</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 	<meta name="viewport" content="width=device-width" />
@@ -24,7 +24,7 @@
 </head>
 
 <body>
-	<div class="image-container set-full-height" style="background-image: url('assets/img/hitman.jpg')">
+	<div class="image-container set-full-height" style="background-image: url('assets/img/MBTI.jpg')">
 		<!--   Big container   -->
 		<div class="container">
 			<div class="row">
@@ -35,9 +35,9 @@
 							<form action="" method="" id="games">
 								<div class="wizard-header">
 									<h3 class="wizard-title">
-										Get a Game !
+										Let's get delved into a virtual world
 									</h3>
-									<h5>This information will let us know more about you</h5>
+									<!-- <h5>This information will let us know more about you</h5> -->
 								</div>
 								<div class="wizard-navigation">
 									<ul>
@@ -59,12 +59,12 @@
 											<div class="col-sm-12">
 												<h4 class="info-text"> Let's start with the basic details !</h4>
 											</div>
-											<div class="col-sm-6">
+											<div class="col-sm-8">
 												<div class="input-group">
 													<div class="radio">
 														<p>Please specify your gender</p>
 														<label>
-															<input type="radio" id="optradio0" name="optradio0" value="m">Male</input>
+															<input type="radio" id="optradio0" name="optradio0" value="m" required>Male</input>
 														</label>
 													</div>
 													<div class="radio">
@@ -74,15 +74,15 @@
 													</div>
 												</div>
 												<div class="input-group">
-													<p>Are you outwardly or inwardly focused (I/E) ?</p>
-													<div class="radio" data-toggle="tooltip" data-placement="right" title="Private, Reserved, Thinks inside head, Loves slow pace, Observes than being the center of attention!">
+													<p>Do you like to</p>
+													<div class="radio" data-toggle="tooltip" data-placement="right" title="Private, Reserved, Introvert!">
 														<label>
-															<input type="radio" id="optradio" name="optradio" value="i">Introvert</input>
+															<input type="radio" id="optradio" name="optradio" value="i">reflect on your thoughts and ideas</input>
 														</label>
 													</div>
-													<div class="radio" data-toggle="tooltip" data-placement="right" title="Talkative, Outgoing, Think out loud, Loves fast pace, Enjoys being center of attention!">
+													<div class="radio" data-toggle="tooltip" data-placement="right" title="Talkative, Outgoing, Extrovert!">
 														<label>
-															<input type="radio" id="optradio" name="optradio" value="e">Extrovert</input>
+															<input type="radio" id="optradio" name="optradio" value="e">meet new people and take action</input>
 														</label>
 													</div>
 													<!-- <div class="form-group label-floating">
@@ -92,29 +92,29 @@
 												</div>
 
 												<div class="input-group">
-													<div class="radio" data-toggle="tooltip" data-placement="right" title="Focus on reality of things, Describes things in literal way, Attention to facts, Inlcined towards practical applocations!"">
-														<p>How do you prefer to take in information (S/N)?</p>
+													<div class="radio" data-toggle="tooltip" data-placement="right" title="Focus on reality of things, Sensing!">
+														<p>Do you trust the</p>
 														<label>
-															<input type="radio" id="optradio1" name="optradio1" value="s">Sensation</input>
+															<input type="radio" id="optradio1" name="optradio1" value="s">tangible and love the specific details</input>
 														</label>
 													</div>
-													<div class="radio" data-toggle="tooltip" data-placement="right" title="Imagines the possibilities of how's, Describes things in figurative way, Enjoys ideas & concepts of their own sake, Notices the big picture!"">
+													<div class="radio" data-toggle="tooltip" data-placement="right" title="Imagines the possibilities of how's, Intuition!">
 														<label>
-															<input type="radio" id="optradio1" name="optradio1" value="n">Intuition</input>
+															<input type="radio" id="optradio1" name="optradio1" value="n">abstract and love to generalize a pattern</input>
 														</label>
 													</div>
 												</div>
 
 												<div class="input-group">
-													<div class="radio" data-toggle="tooltip" data-placement="right" title="Values justice & fairness, Reasonable & level-headed, Enjoys finding faults in arguments, Makes decisions using logical reasoning!">
-														<p>How do you prefer to make decisions (T/F)?</p>
+													<div class="radio" data-toggle="tooltip" data-placement="right" title="Values justice & fairness, Thinking!">
+														<p>Do you make decisions</p>
 														<label>
-															<input type="radio" id="optradio2" name="optradio2" value="t">Thinking</label>
+															<input type="radio" id="optradio2" name="optradio2" value="t">through detached, rational and logical thought</label>
 														</input>
 													</div>
-													<div class="radio" data-toggle="tooltip" data-placement="right" title="Base decisions on personal values & how it affects others, Valuse harmony & forgiveness, Likes to please people, Described as warm & empathetic">
+													<div class="radio" data-toggle="tooltip" data-placement="right" title="Base decisions on personal values, Feeling!">
 														<label>
-															<input type="radio" id="optradio2" name="optradio2" value="f">Feeling</input>
+															<input type="radio" id="optradio2" name="optradio2" value="f">by getting a feel for the situation and looking for consensus</input>
 														</label>
 													</div>
 
@@ -122,15 +122,15 @@
 
 												<div class="input-group">
 
-													<div class="radio" data-toggle="tooltip" data-placement="right" title="Thinks rules & deadlines, Prefers to have matters settled, Prefers to have step by step instructions, Likes to make plans!">
-														<p>How do you prefer to live your outer life (J/P)?</p>
+													<div class="radio" data-toggle="tooltip" data-placement="right" title="Thinks rules & deadlines, Judging!">
+														<p>Do you prefer to</p>
 														<label>
-															<input type="radio" id="optradio3" name="optradio3" value="j">Judging</input>
+															<input type="radio" id="optradio3" name="optradio3" value="j">have matters settled</input>
 														</label>
 													</div>
-													<div class="radio" data-toggle="tooltip" data-placement="right" title="Prefers to leave options open, Sees rules & deadlines flexible, Likes to improvise, Loves to enjoy surprises & new situations, Tends to be Spontaneous!">
+													<div class="radio" data-toggle="tooltip" data-placement="right" title="Prefers to leave options open, Perceiving!">
 														<label>
-															<input type="radio" id="optradio3" name="optradio3" value="p">Perceiving</input>
+															<input type="radio" id="optradio3" name="optradio3" value="p">keep decisions open</input>
 														</label>
 													</div>
 
@@ -145,7 +145,7 @@
 											<div class="col-sm-10">
 												<div class="input-group">
 													<div class="radio">
-														<p>Would you prefer to enjoy the excitement from chaotic and fast-pace games?</p>
+														<p>Do you like action packed games?</p>
 														<label>
 															<input type="radio" id="optradio4" name="optradio4" value="y">Yes</input>
 														</label>
@@ -159,7 +159,7 @@
 
 												<div class="input-group">
 													<div class="radio">
-														<p>Do you like to play with others, as a team against other teams?</p>
+														<p>Do you like multiplayer games?</p>
 														<label>
 															<input type="radio" id="optradio5" name="optradio5" value="y">Yes</input>
 														</label>
@@ -173,7 +173,7 @@
 
 												<div class="input-group">
 													<div class="radio">
-														<p>Do you enjoy strategic games which requires you to think ahead?</p>
+														<p>Do you like games with high difficulty or requires you to think ahead?</p>
 														<label>
 															<input type="radio" id="optradio6" name="optradio6" value="y">Yes</input>
 														</label>
@@ -186,7 +186,7 @@
 												</div>
 												<div class="input-group">
 													<div class="radio">
-														<p>Do You gain satisfaction from collecting the best items in the game?</p>
+														<p>Do you like games with multiple side quests or characters that get stronger over time?</p>
 														<label>
 															<input type="radio" id="optradio7" name="optradio7" value="y">Yes</input>
 														</label>
@@ -199,7 +199,7 @@
 												</div>
 												<div class="input-group">
 													<div class="radio">
-														<p>Do you enjoy games with elaborate plot and immerse yourself into the game?</p>
+														<p>Do you like to immerse yourself into the story-line or game world?</p>
 														<label>
 															<input type="radio" id="optradio8" name="optradio8" value="y">Yes</input>
 														</label>
@@ -213,7 +213,7 @@
 
 												<div class="input-group">
 													<div class="radio">
-														<p>Do you enjoy games which allows you to demonstrate your creativity?</p>
+														<p>Do you like games that gives you the freedom to customize or experiment different possibilities?</p>
 														<label>
 															<input type="radio" id="optradio9" name="optradio9" value="y">Yes</input>
 														</label>
@@ -232,10 +232,10 @@
 
 									<div class="tab-pane" id="description">
 										<div class="row">
-											<!-- <h4 class="info-text">Recommendation</h4> -->
+											<h4 class="info-text"><b>Click on Finish button to find our top picks</b></h4>
 											<div class="col-sm-6 col-sm-offset-1">
 												<div class="form-group">
-													<label>Top picks just for you</label>
+													<!-- <label>Top picks just for you</label> -->
 													<textarea class="form-control" placeholder="" id="resultarea" rows=15 name="resultarea"></textarea>
 													<!--rows=3-->
 												</div>
@@ -243,7 +243,7 @@
 											<div class="col-sm-4">
 												<div class="form-group">
 													<!--  <label class="control-label">Short Description</label> -->
-													<p class="description">"These games are really nice. It has some kind of magic bound to it !"</p>
+												<!-- <p class="description">"These games recommended here has some kind of magic bound to it!"</p> -->
 												</div>
 											</div>
 										</div>

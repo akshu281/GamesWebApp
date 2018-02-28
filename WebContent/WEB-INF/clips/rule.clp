@@ -1,5 +1,4 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; This program is written by Darren Teo, 2018, ISS NUS (Copyright) 
 ;; This is a rule-based system for recommending games to
 ;; the user. It is an interactive system that makes use of certainty factors. 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -177,6 +176,7 @@
 (modify ?MBTI4 (MBTI4 ?MBTI4))
 )
 
+
 ;**** Rule 5: MBTI_Combined.
 (defrule MBTI_Combined
 ?MBTI_Com <- (User 
@@ -190,6 +190,7 @@
 ;(printout t "Your MBTI is " ?MBTI1 ?MBTI2 ?MBTI3 ?MBTI4 crlf)
 (modify ?MBTI_Com (MBTI_Com ?MBTI_Com))
 )
+
 
 ;**** Rule 6: assert MBTI cf.
 (defrule MBTI_Com
@@ -479,11 +480,12 @@
 (modify ?Creativity (Creativity ?Creativity))
 )
 
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Do not allow facts to be duplicates
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defrule start 
+(defrule stop_duplicate 
 (declare (salience -2)) 
 => (set-fact-duplication FALSE))
 
@@ -510,7 +512,7 @@
 
 (defrule find-max-value2
 (declare (salience -3))
-?rg2 <- (Recommended_Game_Type (rg2 nil))
+?rg2 <- (Recommended_Game_Type (rg1 ?rg1) (rg2 nil))
 ?r1 <- (Certainty_Factor (game_type ?game_type) (cf ?cf1))
 (not (Certainty_Factor (cf ?cf2&:(my-predicate ?cf2 ?cf1))))
 =>
@@ -521,8 +523,7 @@
 
 (defrule find-max-value3
 (declare (salience -3))
-(Recommended_Game_Type (rg2 ?rg2))
-?rg3 <- (Recommended_Game_Type (rg3 nil))
+?rg3 <- (Recommended_Game_Type (rg2 ?rg2) (rg3 nil))
 ?r1 <- (Certainty_Factor (game_type ?game_type) (cf ?cf1))
 (not (Certainty_Factor (cf ?cf2&:(my-predicate ?cf2 ?cf1))))
 =>
@@ -530,6 +531,7 @@
 (modify  ?rg3 (rg3 ?game_type))
 (retract ?r1)
 )
+
 
 ;;;;;;;;;;;;;;;
 ;Shooter Games;
@@ -543,7 +545,7 @@
 )
 (User (Action y))
 =>
-(assert (Recommended_Game (Game Call_of_Duty_WWII)))
+(assert (Recommended_Game (Game Shooter:Call_of_Duty_WWII_$38.99)))
 )
 
 (defrule Social_Shooter
@@ -554,7 +556,7 @@
 )
 (User (Social y))
 =>
-(assert (Recommended_Game (Game Overwatch)))
+(assert (Recommended_Game (Game Shooter:Overwatch_$20.00)))
 )
 
 (defrule Mastery_Shooter
@@ -565,7 +567,7 @@
 )
 (User (Mastery y))
 =>
-(assert (Recommended_Game (Game Metal_Gear_Solid_V)))
+(assert (Recommended_Game (Game Shooter:Metal_Gear_Solid_V_$42.00)))
 )
 
 
@@ -577,7 +579,7 @@
 )
 (User (Achievement y))
 =>
-(assert (Recommended_Game (Game Destiny_2)))
+(assert (Recommended_Game (Game Shooter:Destiny_2_$59.99)))
 )
 
 
@@ -589,7 +591,7 @@
 )
 (User (Immersion y))
 =>
-(assert (Recommended_Game (Game Bioshock_Infinite)))
+(assert (Recommended_Game (Game Shooter:Bioshock_Infinite_$29.00)))
 )
 
 (defrule Creativity_Shooter
@@ -600,7 +602,7 @@
 )
 (User (Creativity y))
 =>
-(assert (Recommended_Game (Game Portal_2)))
+(assert (Recommended_Game (Game Shooter:Portal_2_$18.50)))
 )
 
 
@@ -616,7 +618,7 @@
 )
 (User (Action y))
 =>
-(assert (Recommended_Game (Game Grand_Theft_Auto)))
+(assert (Recommended_Game (Game RPG:Grand_Theft_Auto_Collection_$49.00)))
 )
 
 (defrule Social_RPG
@@ -627,7 +629,7 @@
 )
 (User (Social y))
 =>
-(assert (Recommended_Game (Game Diablo_III)))
+(assert (Recommended_Game (Game RPG:Diablo_III_$29.99)))
 )
 
 (defrule Mastery_RPG
@@ -638,7 +640,7 @@
 )
 (User (Mastery y))
 =>
-(assert (Recommended_Game (Game Dark_Soul_III)))
+(assert (Recommended_Game (Game RPG:Dark_Soul_III_$59.90)))
 )
 
 
@@ -650,7 +652,7 @@
 )
 (User (Achievement y))
 =>
-(assert (Recommended_Game (Game Witcher_3)))
+(assert (Recommended_Game (Game RPG:Witcher_3_$50.39)))
 )
 
 
@@ -662,7 +664,7 @@
 )
 (User (Immersion y))
 =>
-(assert (Recommended_Game (Game Final_Fantasy_Series)))
+(assert (Recommended_Game (Game RPG:Final_Fantasy_XV_$69.90)))
 )
 
 (defrule Creativity_RPG
@@ -673,7 +675,7 @@
 )
 (User (Creativity y))
 =>
-(assert (Recommended_Game (Game Minecraft_Story_Mode)))
+(assert (Recommended_Game (Game RPG:Minecraft_Story_Mode_$25.00)))
 )
 
 
@@ -689,7 +691,7 @@
 )
 (User (Action y))
 =>
-(assert (Recommended_Game (Game Unbox_Newbie_Adventure)))
+(assert (Recommended_Game (Game Platform:Unbox_Newbie_Adventure_$20.00)))
 )
 
 (defrule Social_Platform
@@ -700,7 +702,7 @@
 )
 (User (Social y))
 =>
-(assert (Recommended_Game (Game Trine_2_Complete_Story)))
+(assert (Recommended_Game (Game Platform:Trine_2_Complete_Story_$20.00)))
 )
 
 (defrule Mastery_Platform
@@ -711,7 +713,7 @@
 )
 (User (Mastery y))
 =>
-(assert (Recommended_Game (Game Getting_Over_It_with_Bennett_Foddy)))
+(assert (Recommended_Game (Game Platform:Getting_Over_It_with_Bennett_Foddy_$8.50)))
 )
 
 
@@ -723,7 +725,7 @@
 )
 (User (Achievement y))
 =>
-(assert (Recommended_Game (Game Hollow_Knight)))
+(assert (Recommended_Game (Game Platform:Hollow_Knight_$15.00)))
 )
 
 
@@ -735,7 +737,7 @@
 )
 (User (Immersion y))
 =>
-(assert (Recommended_Game (Game Night_in_the_wood)))
+(assert (Recommended_Game (Game Platform:Night_in_the_wood_$14.00)))
 )
 
 (defrule Creativity_Platform
@@ -746,7 +748,7 @@
 )
 (User (Creativity y))
 =>
-(assert (Recommended_Game (Game Human_Fall_Flat)))
+(assert (Recommended_Game (Game Platform:Human_Fall_Flat_$15.00)))
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -761,7 +763,7 @@
 )
 (User (Action y))
 =>
-(assert (Recommended_Game (Game Total_War_Series)))
+(assert (Recommended_Game (Game TBS:Total_War_Shogun_$29.00)))
 )
 
 (defrule Social_TBS
@@ -772,7 +774,7 @@
 )
 (User (Social y))
 =>
-(assert (Recommended_Game (Game Gremlins_Inc)))
+(assert (Recommended_Game (Game TBS:Gremlins_Inc_$18.00)))
 )
 
 (defrule Mastery_TBS
@@ -783,7 +785,7 @@
 )
 (User (Mastery y))
 =>
-(assert (Recommended_Game (Game Civilization)))
+(assert (Recommended_Game (Game TBS:Civilization_V_$29.00)))
 )
 
 
@@ -795,7 +797,7 @@
 )
 (User (Achievement y))
 =>
-(assert (Recommended_Game (Game XCOM2)))
+(assert (Recommended_Game (Game TBS:XCOM2_$79.90)))
 )
 
 
@@ -807,7 +809,7 @@
 )
 (User (Immersion y))
 =>
-(assert (Recommended_Game (Game Final_Fantasy_Tactics)))
+(assert (Recommended_Game (Game TBS:Final_Fantasy_VII_$14.99)))
 )
 
 (defrule Creativity_TBS
@@ -818,7 +820,7 @@
 )
 (User (Creativity y))
 =>
-(assert (Recommended_Game (Game Divinity_Original_Sin_2)))
+(assert (Recommended_Game (Game TBS:Divinity_Original_Sin_2_$49.00)))
 )
 
 
@@ -835,7 +837,7 @@
 )
 (User (Action y))
 =>
-(assert (Recommended_Game (Game Path_of_Exile)))
+(assert (Recommended_Game (Game MMORPG:Path_of_Exile_$0)))
 )
 
 (defrule Social_MMORPG
@@ -846,7 +848,7 @@
 )
 (User (Social y))
 =>
-(assert (Recommended_Game (Game Shakes_and_Fidget)))
+(assert (Recommended_Game (Game MMORPG:Shakes_and_Fidget_$0)))
 )
 
 (defrule Mastery_MMORPG
@@ -857,7 +859,7 @@
 )
 (User (Mastery y))
 =>
-(assert (Recommended_Game (Game Anarchy_Online)))
+(assert (Recommended_Game (Game MMORPG:Anarchy_Online_$0)))
 )
 
 
@@ -869,7 +871,7 @@
 )
 (User (Achievement y))
 =>
-(assert (Recommended_Game (Game World_of_Warcraft)))
+(assert (Recommended_Game (Game MMORPG:World_of_Warcraft_$49.99)))
 )
 
 
@@ -881,7 +883,7 @@
 )
 (User (Immersion y))
 =>
-(assert (Recommended_Game (Game FINAL_FANTASY_XIV)))
+(assert (Recommended_Game (Game MMORPG:FINAL_FANTASY_XIV_$24.00)))
 )
 
 (defrule Creativity_MMORPG
@@ -892,7 +894,7 @@
 )
 (User (Creativity y))
 =>
-(assert (Recommended_Game (Game Chronicles_of_Elyria)))
+(assert (Recommended_Game (Game MMORPG:Chronicles_of_Elyria_$0)))
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -907,7 +909,7 @@
 )
 (User (Action y))
 =>
-(assert (Recommended_Game (Game Supreme_Commander)))
+(assert (Recommended_Game (Game RTS:Supreme_Commander_$15.00)))
 )
 
 (defrule Social_RTS
@@ -918,7 +920,7 @@
 )
 (User (Social y))
 =>
-(assert (Recommended_Game (Game Starcraft_II)))
+(assert (Recommended_Game (Game RTS:Starcraft_II_$39.99)))
 )
 
 (defrule Mastery_RTS
@@ -929,7 +931,7 @@
 )
 (User (Mastery y))
 =>
-(assert (Recommended_Game (Game Shadow_Tactics_Blades_of_the_Shogun)))
+(assert (Recommended_Game (Game RTS:Shadow_Tactics_Blades_of_the_Shogun_$39.00)))
 )
 
 
@@ -941,7 +943,7 @@
 )
 (User (Achievement y))
 =>
-(assert (Recommended_Game (Game Warhammer_40000)))
+(assert (Recommended_Game (Game RTS:Warhammer_40000_$45.89)))
 )
 
 
@@ -953,7 +955,7 @@
 )
 (User (Immersion y))
 =>
-(assert (Recommended_Game (Game Crusader_Kings_II)))
+(assert (Recommended_Game (Game RTS:Crusader_Kings_II_$39.00)))
 )
 
 (defrule Creativity_RTS
@@ -964,7 +966,7 @@
 )
 (User (Creativity y))
 =>
-(assert (Recommended_Game (Game Stellaris)))
+(assert (Recommended_Game (Game RTS:Stellaris_$15.60)))
 )
 
 
@@ -980,7 +982,7 @@
 )
 (User (Action y))
 =>
-(assert (Recommended_Game (Game Burnout)))
+(assert (Recommended_Game (Game Racing:Burnout_Paradise_$24.90)))
 )
 
 (defrule Social_Racing
@@ -991,7 +993,7 @@
 )
 (User (Social y))
 =>
-(assert (Recommended_Game (Game Mario_Kart)))
+(assert (Recommended_Game (Game Racing:Sonic_All_Stars_Racing_$20.00)))
 )
 
 (defrule Mastery_Racing
@@ -1002,7 +1004,7 @@
 )
 (User (Mastery y))
 =>
-(assert (Recommended_Game (Game F1_2017)))
+(assert (Recommended_Game (Game Racing:F1_2017_$55.00)))
 )
 
 
@@ -1014,7 +1016,7 @@
 )
 (User (Achievement y))
 =>
-(assert (Recommended_Game (Game Forza_Horizon_3)))
+(assert (Recommended_Game (Game Racing:Forza_Horizon_3_$62.25)))
 )
 
 
@@ -1026,7 +1028,7 @@
 )
 (User (Immersion y))
 =>
-(assert (Recommended_Game (Game Shift_2)))
+(assert (Recommended_Game (Game Racing:Shift_2_$24.90)))
 )
 
 (defrule Creativity_Racing
@@ -1037,7 +1039,7 @@
 )
 (User (Creativity y))
 =>
-(assert (Recommended_Game (Game Trailmakers)))
+(assert (Recommended_Game (Game Racing:Trailmakers_$20.00)))
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1052,7 +1054,7 @@
 )
 (User (Action y))
 =>
-(assert (Recommended_Game (Game RimWorld)))
+(assert (Recommended_Game (Game Simulation:RimWorld_$26.00)))
 )
 
 (defrule Social_Simulation
@@ -1063,7 +1065,7 @@
 )
 (User (Social y))
 =>
-(assert (Recommended_Game (Game Tropico_5)))
+(assert (Recommended_Game (Game Simulation:Tropico_5_$18.50)))
 )
 
 (defrule Mastery_Simulation
@@ -1074,7 +1076,7 @@
 )
 (User (Mastery y))
 =>
-(assert (Recommended_Game (Game Rise_to_Ruins)))
+(assert (Recommended_Game (Game Simulation:Rise_to_Ruins_$10.50)))
 )
 
 
@@ -1086,7 +1088,7 @@
 )
 (User (Achievement y))
 =>
-(assert (Recommended_Game (Game Harvest_Moon)))
+(assert (Recommended_Game (Game Simulation:Harvest_Moon_$26.00)))
 )
 
 
@@ -1098,7 +1100,7 @@
 )
 (User (Immersion y))
 =>
-(assert (Recommended_Game (Game This_War_of_Mine)))
+(assert (Recommended_Game (Game Simulation:This_War_of_Mine_$20.00)))
 )
 
 (defrule Creativity_Simulation
@@ -1109,7 +1111,7 @@
 )
 (User (Creativity y))
 =>
-(assert (Recommended_Game (Game The_Sims_4)))
+(assert (Recommended_Game (Game Simulation:The_Sims_3_$24.90)))
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1124,7 +1126,7 @@
 )
 (User (Action y))
 =>
-(assert (Recommended_Game (Game Corroded)))
+(assert (Recommended_Game (Game MOBA:Corroded_$13.00)))
 )
 
 (defrule Social_MOBA
@@ -1135,7 +1137,7 @@
 )
 (User (Social y))
 =>
-(assert (Recommended_Game (Game Strife)))
+(assert (Recommended_Game (Game MOBA:Strife_$0)))
 )
 
 (defrule Mastery_MOBA
@@ -1146,7 +1148,7 @@
 )
 (User (Mastery y))
 =>
-(assert (Recommended_Game (Game Dota_2)))
+(assert (Recommended_Game (Game MOBA:Dota_2_$0)))
 )
 
 
@@ -1158,7 +1160,7 @@
 )
 (User (Achievement y))
 =>
-(assert (Recommended_Game (Game Atlas_Reactor)))
+(assert (Recommended_Game (Game MOBA:Atlas_Reactor_$0)))
 )
 
 
@@ -1170,7 +1172,7 @@
 )
 (User (Immersion y))
 =>
-(assert (Recommended_Game (Game Battlerite)))
+(assert (Recommended_Game (Game MOBA:Battlerite_$0)))
 )
 
 (defrule Creativity_MOBA
@@ -1181,7 +1183,7 @@
 )
 (User (Creativity y))
 =>
-(assert (Recommended_Game (Game Smite)))
+(assert (Recommended_Game (Game MOBA:Smite_$0)))
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1196,7 +1198,7 @@
 )
 (User (Action y))
 =>
-(assert (Recommended_Game (Game Little_Inferno)))
+(assert (Recommended_Game (Game Puzzle:Little_Inferno_$10.00)))
 )
 
 (defrule Social_Puzzle
@@ -1207,7 +1209,7 @@
 )
 (User (Social y))
 =>
-(assert (Recommended_Game (Game Fat_Mask)))
+(assert (Recommended_Game (Game Puzzle:Fat_Mask_$10.00)))
 )
 
 (defrule Mastery_Puzzle
@@ -1218,7 +1220,7 @@
 )
 (User (Mastery y))
 =>
-(assert (Recommended_Game (Game World_of_Goo)))
+(assert (Recommended_Game (Game Puzzle:World_of_Goo_$10.00)))
 )
 
 
@@ -1230,7 +1232,7 @@
 )
 (User (Achievement y))
 =>
-(assert (Recommended_Game (Game Gorogoa)))
+(assert (Recommended_Game (Game Puzzle:Gorogoa_$14.50)))
 )
 
 
@@ -1242,7 +1244,7 @@
 )
 (User (Immersion y))
 =>
-(assert (Recommended_Game (Game Inside)))
+(assert (Recommended_Game (Game Puzzle:Inside_$20)))
 )
 
 (defrule Creativity_Puzzle
@@ -1253,7 +1255,7 @@
 )
 (User (Creativity y))
 =>
-(assert (Recommended_Game (Game Scribblenauts_Unlimited)))
+(assert (Recommended_Game (Game Puzzle:Scribblenauts_Unlimited_$20)))
 )
 
 
@@ -1269,7 +1271,7 @@
 )
 (User (Action y))
 =>
-(assert (Recommended_Game (Game One_Finger_Death_Punch)))
+(assert (Recommended_Game (Game Rhythm:One_Finger_Death_Punch_$5.25)))
 )
 
 (defrule Social_Rhythm
@@ -1280,7 +1282,7 @@
 )
 (User (Social y))
 =>
-(assert (Recommended_Game (Game The_Metronomicon)))
+(assert (Recommended_Game (Game Rhythm:The_Metronomicon_$20.00)))
 )
 
 (defrule Mastery_Rhythm
@@ -1291,7 +1293,7 @@
 )
 (User (Mastery y))
 =>
-(assert (Recommended_Game (Game Super_Hexagon)))
+(assert (Recommended_Game (Game Rhythm:Super_Hexagon_$3.50)))
 )
 
 
@@ -1303,7 +1305,7 @@
 )
 (User (Achievement y))
 =>
-(assert (Recommended_Game (Game Aaero)))
+(assert (Recommended_Game (Game Rhythm:Aaero_$14.50)))
 )
 
 
@@ -1315,7 +1317,7 @@
 )
 (User (Immersion y))
 =>
-(assert (Recommended_Game (Game Crypt_of_the_NecroDancer)))
+(assert (Recommended_Game (Game Rhythm:Crypt_of_the_NecroDancer_$15.00)))
 )
 
 (defrule Creativity_Rhythm
@@ -1326,7 +1328,7 @@
 )
 (User (Creativity y))
 =>
-(assert (Recommended_Game (Game Airtone)))
+(assert (Recommended_Game (Game Rhythm:Airtone_$29.00)))
 )
 
 
@@ -1343,7 +1345,7 @@
 )
 (User (Action y))
 =>
-(assert (Recommended_Game (Game Mutant_Football_League)))
+(assert (Recommended_Game (Game Sports:Mutant_Football_League_$18.50)))
 )
 
 (defrule Social_Sports
@@ -1354,7 +1356,7 @@
 )
 (User (Social y))
 =>
-(assert (Recommended_Game (Game Rocket_League)))
+(assert (Recommended_Game (Game Sports:Rocket_League_$20.00)))
 )
 
 (defrule Mastery_Sports
@@ -1365,7 +1367,7 @@
 )
 (User (Mastery y))
 =>
-(assert (Recommended_Game (Game Lethal_League)))
+(assert (Recommended_Game (Game Sports:Lethal_League_$14.00)))
 )
 
 
@@ -1377,7 +1379,7 @@
 )
 (User (Achievement y))
 =>
-(assert (Recommended_Game (Game Football_Manager)))
+(assert (Recommended_Game (Game Sports:Football_Manager_$55.00)))
 )
 
 
@@ -1389,7 +1391,7 @@
 )
 (User (Immersion y))
 =>
-(assert (Recommended_Game (Game Behold_the_Kickmen)))
+(assert (Recommended_Game (Game Sports:Behold_the_Kickmen_$4.50)))
 )
 
 (defrule Creativity_Sports
@@ -1400,9 +1402,154 @@
 )
 (User (Creativity y))
 =>
-(assert (Recommended_Game (Game Superflight)))
+(assert (Recommended_Game (Game Sports:Superflight_$3.25)))
 )
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;No Motivation
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule NM_FTS
+(or 
+(Recommended_Game_Type (rg1 FTS))
+(Recommended_Game_Type (rg2 FTS))
+(Recommended_Game_Type (rg3 FTS))
+)
+(User (Action n)(Social n)(Mastery n)(Achievement n)(Immersion n)(Creativity n))
+=>
+(assert (Recommended_Game (Game M_Shooter:Critical_Ops_$0)))
+)
+
+
+(defrule NM_RPG
+(or 
+(Recommended_Game_Type (rg1 RPG))
+(Recommended_Game_Type (rg2 RPG))
+(Recommended_Game_Type (rg3 RPG))
+)
+(User (Action n)(Social n)(Mastery n)(Achievement n)(Immersion n)(Creativity n))
+=>
+(assert (Recommended_Game (Game M_RPG:Doom_and_Destiny_Advanced_$4.99)))
+)
+
+
+(defrule NM_Platform
+(or 
+(Recommended_Game_Type (rg1 Platform))
+(Recommended_Game_Type (rg2 Platform))
+(Recommended_Game_Type (rg3 Platform))
+)
+(User (Action n)(Social n)(Mastery n)(Achievement n)(Immersion n)(Creativity n))
+=>
+(assert (Recommended_Game (Game M_Platform:Platform:Heart_Star_$0)))
+)
+
+
+(defrule NM_TBS
+(or 
+(Recommended_Game_Type (rg1 TBS))
+(Recommended_Game_Type (rg2 TBS))
+(Recommended_Game_Type (rg3 TBS))
+)
+(User (Action n)(Social n)(Mastery n)(Achievement n)(Immersion n)(Creativity n))
+=>
+(assert (Recommended_Game (Game M_TBS:Final_Fantasy_Tactics_$0)))
+)
+
+
+(defrule NM_MMORPG
+(or 
+(Recommended_Game_Type (rg1 MMORPG))
+(Recommended_Game_Type (rg2 MMORPG))
+(Recommended_Game_Type (rg3 MMORPG))
+)
+(User (Action n)(Social n)(Mastery n)(Achievement n)(Immersion n)(Creativity n))
+=>
+(assert (Recommended_Game (Game M_MMORPG:Aurcus_Online_$0)))
+)
+
+(defrule NM_RTS
+(or 
+(Recommended_Game_Type (rg1 RTS))
+(Recommended_Game_Type (rg2 RTS))
+(Recommended_Game_Type (rg3 RTS))
+)
+(User (Action n)(Social n)(Mastery n)(Achievement n)(Immersion n)(Creativity n))
+=>
+(assert (Recommended_Game (Game M_RTS:Titanfall_Assault_$0)))
+)
+
+
+(defrule NM_Racing
+(or 
+(Recommended_Game_Type (rg1 Racing))
+(Recommended_Game_Type (rg2 Racing))
+(Recommended_Game_Type (rg3 Racing))
+)
+(User (Action n)(Social n)(Mastery n)(Achievement n)(Immersion n)(Creativity n))
+=>
+(assert (Recommended_Game (Game M_Racing:Asphalt_Xtreme_$0)))
+)
+
+
+(defrule NM_Simulation
+(or 
+(Recommended_Game_Type (rg1 Simulation))
+(Recommended_Game_Type (rg2 Simulation))
+(Recommended_Game_Type (rg3 Simulation))
+)
+(User (Action n)(Social n)(Mastery n)(Achievement n)(Immersion n)(Creativity n))
+=>
+(assert (Recommended_Game (Game M_Simulation:Fallout_Shelter_$0)))
+)
+
+
+(defrule NM_MOBA
+(or 
+(Recommended_Game_Type (rg1 MOBA))
+(Recommended_Game_Type (rg2 MOBA))
+(Recommended_Game_Type (rg3 MOBA))
+)
+(User (Action n)(Social n)(Mastery n)(Achievement n)(Immersion n)(Creativity n))
+=>
+(assert (Recommended_Game (Game M_MOBA:Mobile_Legend_$0)))
+)
+
+
+(defrule NM_Puzzle
+(or 
+(Recommended_Game_Type (rg1 Puzzle))
+(Recommended_Game_Type (rg2 Puzzle))
+(Recommended_Game_Type (rg3 Puzzle))
+)
+(User (Action n)(Social n)(Mastery n)(Achievement n)(Immersion n)(Creativity n))
+=>
+(assert (Recommended_Game (Game M_Puzzle:Candy_Crush_$0)))
+)
+
+
+(defrule NM_Sports
+(or 
+(Recommended_Game_Type (rg1 Sports))
+(Recommended_Game_Type (rg2 Sports))
+(Recommended_Game_Type (rg3 Sports))
+)
+(User (Action n)(Social n)(Mastery n)(Achievement n)(Immersion n)(Creativity n))
+=>
+(assert (Recommended_Game (Game M_Sports:Stickman_Soccer_2016_$0)))
+)
+
+
+(defrule NM_Rhythm
+(or 
+(Recommended_Game_Type (rg1 Rhythm))
+(Recommended_Game_Type (rg2 Rhythm))
+(Recommended_Game_Type (rg3 Rhythm))
+)
+(User (Action n)(Social n)(Mastery n)(Achievement n)(Immersion n)(Creativity n))
+=>
+(assert (Recommended_Game (Game M_Rhythm:Deemo_$0)))
+)
 
 
 
