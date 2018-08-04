@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>dffnxpsr.c</FILENAME>
+      <LINE>429</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>AddDeffunction</FUNCTION>
+    <DECORATED>?AddDeffunction@?A0x35aa8607@@$$FYAPAUdeffunctionStruct@@PAXPAUsymbolHashNode@@PAUexpr@@HHHH@Z</DECORATED>
+    <FUNCLINE>401</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>dffnxpsr.c</FILENAME>
+        <LINE>410</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>dffnxpsr.c</FILENAME>
+        <LINE>411</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>dffnxpsr.c</FILENAME>
+        <LINE>413</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>dffnxpsr.c</FILENAME>
+        <LINE>426</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>dffnxpsr.c</FILENAME>
+        <LINE>427</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>dffnxpsr.c</FILENAME>
+        <LINE>429</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

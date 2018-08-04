@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>exprnops.c</FILENAME>
+      <LINE>339</LINE>
+      <COLUMN>7</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>GenConstant</FUNCTION>
+    <DECORATED>?GenConstant@@$$FYAPAUexpr@@PAXG0@Z</DECORATED>
+    <FUNCLINE>332</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>337</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>339</LINE>
+        <COLUMN>7</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>exprnops.c</FILENAME>
+      <LINE>463</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>CombineExpressions</FUNCTION>
+    <DECORATED>?CombineExpressions@@$$FYAPAUexpr@@PAXPAU1@1@Z</DECORATED>
+    <FUNCLINE>409</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>414</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>420</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>426</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>434</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>457</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>460</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>461</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>463</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>463</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>exprnops.c</FILENAME>
+      <LINE>463</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>CombineExpressions</FUNCTION>
+    <DECORATED>?CombineExpressions@@$$FYAPAUexpr@@PAXPAU1@1@Z</DECORATED>
+    <FUNCLINE>409</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>414</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>420</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>426</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>434</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>457</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>460</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>461</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>463</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>463</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>exprnops.c</FILENAME>
+      <LINE>485</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>CombineExpressions</FUNCTION>
+    <DECORATED>?CombineExpressions@@$$FYAPAUexpr@@PAXPAU1@1@Z</DECORATED>
+    <FUNCLINE>409</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>414</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>420</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>426</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>434</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>457</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>479</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>482</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>483</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>485</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>485</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>exprnops.c</FILENAME>
+      <LINE>485</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>CombineExpressions</FUNCTION>
+    <DECORATED>?CombineExpressions@@$$FYAPAUexpr@@PAXPAU1@1@Z</DECORATED>
+    <FUNCLINE>409</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>414</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>420</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>426</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>434</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>457</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>479</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>482</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>483</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>485</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>485</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>exprnops.c</FILENAME>
+      <LINE>493</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>CombineExpressions</FUNCTION>
+    <DECORATED>?CombineExpressions@@$$FYAPAUexpr@@PAXPAU1@1@Z</DECORATED>
+    <FUNCLINE>409</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>414</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>420</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>426</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>434</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>457</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>479</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>482</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>483</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>489</LINE>
+        <COLUMN>30</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>492</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>493</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>493</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>exprnops.c</FILENAME>
+      <LINE>493</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>CombineExpressions</FUNCTION>
+    <DECORATED>?CombineExpressions@@$$FYAPAUexpr@@PAXPAU1@1@Z</DECORATED>
+    <FUNCLINE>409</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>414</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>420</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>426</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>434</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>457</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>479</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>482</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>483</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>489</LINE>
+        <COLUMN>30</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>492</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>493</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>493</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>exprnops.c</FILENAME>
+      <LINE>440</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>CombineExpressions</FUNCTION>
+    <DECORATED>?CombineExpressions@@$$FYAPAUexpr@@PAXPAU1@1@Z</DECORATED>
+    <FUNCLINE>409</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>414</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>420</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>426</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>434</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>437</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>438</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>440</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>440</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>exprnops.c</FILENAME>
+      <LINE>440</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>CombineExpressions</FUNCTION>
+    <DECORATED>?CombineExpressions@@$$FYAPAUexpr@@PAXPAU1@1@Z</DECORATED>
+    <FUNCLINE>409</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>414</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>420</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>426</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>434</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>437</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>438</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>440</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>440</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>exprnops.c</FILENAME>
+      <LINE>533</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>NegateExpression</FUNCTION>
+    <DECORATED>?NegateExpression@@$$FYAPAUexpr@@PAXPAU1@@Z</DECORATED>
+    <FUNCLINE>513</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>517</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>523</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>530</LINE>
+        <COLUMN>28</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>532</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>533</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>533</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>exprnops.c</FILENAME>
+      <LINE>533</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>NegateExpression</FUNCTION>
+    <DECORATED>?NegateExpression@@$$FYAPAUexpr@@PAXPAU1@@Z</DECORATED>
+    <FUNCLINE>513</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>517</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>523</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>530</LINE>
+        <COLUMN>28</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>532</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>533</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>exprnops.c</FILENAME>
+        <LINE>533</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

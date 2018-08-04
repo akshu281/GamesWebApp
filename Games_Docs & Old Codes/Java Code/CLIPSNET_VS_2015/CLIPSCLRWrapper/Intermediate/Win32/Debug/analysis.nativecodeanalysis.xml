@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>analysis.c</FILENAME>
+      <LINE>140</LINE>
+      <COLUMN>21</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>VariableAnalysis</FUNCTION>
+    <DECORATED>?VariableAnalysis@@$$FYAHPAXPAUlhsParseNode@@@Z</DECORATED>
+    <FUNCLINE>115</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>119</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>120</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>120</LINE>
+        <COLUMN>44</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>121</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>131</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>138</LINE>
+        <COLUMN>40</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>140</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>analysis.c</FILENAME>
+      <LINE>237</LINE>
+      <COLUMN>21</COLUMN>
+    </SFA>
+    <DEFECTCODE>6011</DEFECTCODE>
+    <DESCRIPTION>Dereferencing NULL pointer 'theNandFrames'. </DESCRIPTION>
+    <FUNCTION>VariableAnalysis</FUNCTION>
+    <DECORATED>?VariableAnalysis@@$$FYAHPAXPAUlhsParseNode@@@Z</DECORATED>
+    <FUNCLINE>115</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>119</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>120</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'theNandFrames' is NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>120</LINE>
+        <COLUMN>44</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>121</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>131</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'patternPtr!=0')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>138</LINE>
+        <COLUMN>40</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this loop, (assume '&lt;branch condition&gt;' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>154</LINE>
+        <COLUMN>27</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'patternPtr-&gt;type==150' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>221</LINE>
+        <COLUMN>32</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'patternPtr-&gt;type==154' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>235</LINE>
+        <COLUMN>38</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume '&lt;branch condition&gt;')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>237</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'theNandFrames' is dereferenced, but may still be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>analysis.c</FILENAME>
+      <LINE>238</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>VariableAnalysis</FUNCTION>
+    <DECORATED>?VariableAnalysis@@$$FYAHPAXPAUlhsParseNode@@@Z</DECORATED>
+    <FUNCLINE>115</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>119</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>120</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>120</LINE>
+        <COLUMN>44</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>121</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>131</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>138</LINE>
+        <COLUMN>40</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>154</LINE>
+        <COLUMN>27</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>221</LINE>
+        <COLUMN>32</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>235</LINE>
+        <COLUMN>38</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>237</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>238</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>238</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>analysis.c</FILENAME>
+      <LINE>238</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>6011</DEFECTCODE>
+    <DESCRIPTION>Dereferencing NULL pointer '(((memoryData *)((((environmentData *)theEnv))-&gt;theData[59])))-&gt;TempMemoryPtr'. See line 237 for an earlier location where this can occur</DESCRIPTION>
+    <FUNCTION>VariableAnalysis</FUNCTION>
+    <DECORATED>?VariableAnalysis@@$$FYAHPAXPAUlhsParseNode@@@Z</DECORATED>
+    <FUNCLINE>115</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>119</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>120</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'theNandFrames' is NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>120</LINE>
+        <COLUMN>44</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>121</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>131</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'patternPtr!=0')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>138</LINE>
+        <COLUMN>40</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this loop, (assume '&lt;branch condition&gt;' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>154</LINE>
+        <COLUMN>27</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'patternPtr-&gt;type==150' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>221</LINE>
+        <COLUMN>32</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'patternPtr-&gt;type==154' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>235</LINE>
+        <COLUMN>38</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume '&lt;branch condition&gt;')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>237</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>238</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>238</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'theNandFrames' is dereferenced, but may still be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>analysis.c</FILENAME>
+      <LINE>238</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>VariableAnalysis</FUNCTION>
+    <DECORATED>?VariableAnalysis@@$$FYAHPAXPAUlhsParseNode@@@Z</DECORATED>
+    <FUNCLINE>115</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>119</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>120</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>120</LINE>
+        <COLUMN>44</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>121</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>131</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>138</LINE>
+        <COLUMN>40</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>154</LINE>
+        <COLUMN>27</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>221</LINE>
+        <COLUMN>32</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>235</LINE>
+        <COLUMN>38</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>237</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>238</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>238</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>analysis.c</FILENAME>
+      <LINE>269</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>ReleaseNandFrames</FUNCTION>
+    <DECORATED>?ReleaseNandFrames@?A0xc3619159@@$$FYAXPAXPAUnandFrame@@@Z</DECORATED>
+    <FUNCLINE>260</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>264</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>266</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>268</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>269</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>269</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>analysis.c</FILENAME>
+      <LINE>269</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>ReleaseNandFrames</FUNCTION>
+    <DECORATED>?ReleaseNandFrames@?A0xc3619159@@$$FYAXPAXPAUnandFrame@@@Z</DECORATED>
+    <FUNCLINE>260</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>264</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>266</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>268</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>269</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>analysis.c</FILENAME>
+        <LINE>269</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

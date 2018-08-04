@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>classinf.c</FILENAME>
+      <LINE>762</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>EnvSlotSources</FUNCTION>
+    <DECORATED>?EnvSlotSources@@$$FYAXPAX0PBDPAUdataObject@@@Z</DECORATED>
+    <FUNCLINE>747</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>753</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>754</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>755</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>755</LINE>
+        <COLUMN>27</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>756</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>756</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>757</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>759</LINE>
+        <COLUMN>83</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>761</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>762</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>classinf.c</FILENAME>
+      <LINE>773</LINE>
+      <COLUMN>17</COLUMN>
+    </SFA>
+    <DEFECTCODE>6305</DEFECTCODE>
+    <DESCRIPTION>Potential mismatch between sizeof and countof quantities. Use sizeof() to scale byte sizes.</DESCRIPTION>
+    <FUNCTION>EnvSlotSources</FUNCTION>
+    <DECORATED>?EnvSlotSources@@$$FYAXPAX0PBDPAUdataObject@@@Z</DECORATED>
+    <FUNCLINE>747</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>2</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>753</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>754</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>755</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>755</LINE>
+        <COLUMN>27</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>756</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>756</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>757</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>759</LINE>
+        <COLUMN>83</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>761</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>762</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>763</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>764</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>765</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>767</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>767</LINE>
+        <COLUMN>31</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>769</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>770</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>771</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+        <FILENAME>classinf.c</FILENAME>
+        <LINE>773</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Expression mixes element counts and byte quantities</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

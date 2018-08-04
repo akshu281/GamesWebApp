@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>rulecmp.c</FILENAME>
+      <LINE>423</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(5) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>DefruleToCode</FUNCTION>
+    <DECORATED>?DefruleToCode@?A0x240ae2fa@@$$FYAXPAXPAU_iobuf@@PAUdefrule@@HHH@Z</DECORATED>
+    <FUNCLINE>401</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>rulecmp.c</FILENAME>
+      <LINE>423</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(6) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>DefruleToCode</FUNCTION>
+    <DECORATED>?DefruleToCode@?A0x240ae2fa@@$$FYAXPAXPAU_iobuf@@PAUdefrule@@HHH@Z</DECORATED>
+    <FUNCLINE>401</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>rulecmp.c</FILENAME>
+      <LINE>423</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(7) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>DefruleToCode</FUNCTION>
+    <DECORATED>?DefruleToCode@?A0x240ae2fa@@$$FYAXPAXPAU_iobuf@@PAUdefrule@@HHH@Z</DECORATED>
+    <FUNCLINE>401</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>rulecmp.c</FILENAME>
+      <LINE>423</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(8) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>DefruleToCode</FUNCTION>
+    <DECORATED>?DefruleToCode@?A0x240ae2fa@@$$FYAXPAXPAU_iobuf@@PAUdefrule@@HHH@Z</DECORATED>
+    <FUNCLINE>401</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>rulecmp.c</FILENAME>
+      <LINE>423</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(9) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>DefruleToCode</FUNCTION>
+    <DECORATED>?DefruleToCode@?A0x240ae2fa@@$$FYAXPAXPAU_iobuf@@PAUdefrule@@HHH@Z</DECORATED>
+    <FUNCLINE>401</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>rulecmp.c</FILENAME>
+      <LINE>423</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(10) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>DefruleToCode</FUNCTION>
+    <DECORATED>?DefruleToCode@?A0x240ae2fa@@$$FYAXPAXPAU_iobuf@@PAUdefrule@@HHH@Z</DECORATED>
+    <FUNCLINE>401</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>rulecmp.c</FILENAME>
+      <LINE>506</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(3) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>JoinToCode</FUNCTION>
+    <DECORATED>?JoinToCode@?A0x240ae2fa@@$$FYAXPAXPAU_iobuf@@PAUjoinNode@@HH@Z</DECORATED>
+    <FUNCLINE>487</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>rulecmp.c</FILENAME>
+      <LINE>506</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(4) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>JoinToCode</FUNCTION>
+    <DECORATED>?JoinToCode@?A0x240ae2fa@@$$FYAXPAXPAU_iobuf@@PAUjoinNode@@HH@Z</DECORATED>
+    <FUNCLINE>487</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>rulecmp.c</FILENAME>
+      <LINE>506</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(5) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>JoinToCode</FUNCTION>
+    <DECORATED>?JoinToCode@?A0x240ae2fa@@$$FYAXPAXPAU_iobuf@@PAUjoinNode@@HH@Z</DECORATED>
+    <FUNCLINE>487</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>rulecmp.c</FILENAME>
+      <LINE>506</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(6) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>JoinToCode</FUNCTION>
+    <DECORATED>?JoinToCode@?A0x240ae2fa@@$$FYAXPAXPAU_iobuf@@PAUjoinNode@@HH@Z</DECORATED>
+    <FUNCLINE>487</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>rulecmp.c</FILENAME>
+      <LINE>506</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(7) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>JoinToCode</FUNCTION>
+    <DECORATED>?JoinToCode@?A0x240ae2fa@@$$FYAXPAXPAU_iobuf@@PAUjoinNode@@HH@Z</DECORATED>
+    <FUNCLINE>487</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>rulecmp.c</FILENAME>
+      <LINE>506</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(8) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>JoinToCode</FUNCTION>
+    <DECORATED>?JoinToCode@?A0x240ae2fa@@$$FYAXPAXPAU_iobuf@@PAUjoinNode@@HH@Z</DECORATED>
+    <FUNCLINE>487</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>rulecmp.c</FILENAME>
+      <LINE>506</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(9) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>JoinToCode</FUNCTION>
+    <DECORATED>?JoinToCode@?A0x240ae2fa@@$$FYAXPAXPAU_iobuf@@PAUjoinNode@@HH@Z</DECORATED>
+    <FUNCLINE>487</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

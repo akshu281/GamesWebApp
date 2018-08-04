@@ -1,0 +1,211 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly CLIPSCLRWrapper, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class CLIPSNET.PrimitiveValue: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    CLIPSType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsVoid(): PrivateScope, Public, HideBySig
+    IsLexeme(): PrivateScope, Public, HideBySig
+    IsSymbol(): PrivateScope, Public, HideBySig
+    IsString(): PrivateScope, Public, HideBySig
+    IsInstanceName(): PrivateScope, Public, HideBySig
+    IsNumber(): PrivateScope, Public, HideBySig
+    IsFloat(): PrivateScope, Public, HideBySig
+    IsInteger(): PrivateScope, Public, HideBySig
+    IsFactAddress(): PrivateScope, Public, HideBySig
+    IsInstanceAddress(): PrivateScope, Public, HideBySig
+    IsMultifield(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class CLIPSNET.PVEnumerator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.Collections.Generic.List`1[CLIPSNET.PrimitiveValue]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Collections.IEnumerator
+  Properties:
+    System.Object Current 'get ' : 
+  Methods:
+    get_Current(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Reset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    MoveNext(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class CLIPSNET.VoidValue: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CLIPSNET.PrimitiveValue
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    CLIPSType(): PrivateScope, Public, Virtual, HideBySig
+Class CLIPSNET.LexemeValue: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  :CLIPSNET.PrimitiveValue
+  Methods:
+    GetLexemeValue(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+Class CLIPSNET.StringValue: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CLIPSNET.LexemeValue
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetStringValue(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    CLIPSType(): PrivateScope, Public, Virtual, HideBySig
+Class CLIPSNET.SymbolValue: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CLIPSNET.LexemeValue
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetSymbolValue(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    CLIPSType(): PrivateScope, Public, Virtual, HideBySig
+Class CLIPSNET.InstanceNameValue: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CLIPSNET.LexemeValue
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetInstanceNameValue(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    CLIPSType(): PrivateScope, Public, Virtual, HideBySig
+Class CLIPSNET.NumberValue: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  :CLIPSNET.PrimitiveValue
+    Void .ctor(Int64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetFloatValue(): PrivateScope, Public, HideBySig
+    GetIntegerValue(): PrivateScope, Public, HideBySig
+    op_Implicit(NumberValue): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Implicit(NumberValue): PrivateScope, Public, Static, HideBySig, SpecialName
+Class CLIPSNET.IntegerValue: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CLIPSNET.NumberValue
+    Void .ctor(Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    CLIPSType(): PrivateScope, Public, Virtual, HideBySig
+Class CLIPSNET.FloatValue: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CLIPSNET.NumberValue
+    Void .ctor(Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    CLIPSType(): PrivateScope, Public, Virtual, HideBySig
+Class CLIPSNET.MultifieldValue: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CLIPSNET.PrimitiveValue
+    Void .ctor(System.Collections.Generic.List`1[CLIPSNET.PrimitiveValue]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Collections.IEnumerable
+  Properties:
+    CLIPSNET.PrimitiveValue Item [Int32] 'get ' : 
+    Int32 Count 'get ' : 
+  Methods:
+    get_Count(): PrivateScope, Public, HideBySig, SpecialName
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    GetMultifieldValue(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CLIPSType(): PrivateScope, Public, Virtual, HideBySig
+Class CLIPSNET.FactAddressValue: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CLIPSNET.PrimitiveValue
+    Void .ctor(CLIPS.FactAddressValue*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetFactIndex(): PrivateScope, Public, HideBySig
+    GetFactSlot(String): PrivateScope, Public, HideBySig
+    GetFactAddressValue(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    CLIPSType(): PrivateScope, Public, Virtual, HideBySig
+Class CLIPSNET.InstanceAddressValue: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CLIPSNET.PrimitiveValue
+    Void .ctor(CLIPS.InstanceAddressValue*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetInstanceName(): PrivateScope, Public, HideBySig
+    DirectGetSlot(String): PrivateScope, Public, HideBySig
+    GetInstanceAddressValue(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    CLIPSType(): PrivateScope, Public, Virtual, HideBySig
+Class CLIPSNET.Router: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    System.String STANDARD_OUTPUT IsConst : Public, Static
+    System.String STANDARD_INPUT IsConst : Public, Static
+    System.String WARNING IsConst : Public, Static
+    System.String ERROR IsConst : Public, Static
+    System.String TRACE IsConst : Public, Static
+    System.String DIALOG IsConst : Public, Static
+    System.String PROMPT IsConst : Public, Static
+    System.String DISPLAY IsConst : Public, Static
+  Methods:
+    Query(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Print(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Getc(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Ungetc(String, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    RouterBridge(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class CLIPSNET.Environment: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    CommandLoop(): PrivateScope, Public, HideBySig
+    Run(Int64): PrivateScope, Public, HideBySig
+    Run(): PrivateScope, Public, HideBySig
+    Reset(): PrivateScope, Public, HideBySig
+    Build(String): PrivateScope, Public, HideBySig
+    GetHaltExecution(): PrivateScope, Public, HideBySig
+    SetHaltExecution(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetHaltRules(): PrivateScope, Public, HideBySig
+    SetHaltRules(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetEvaluationError(): PrivateScope, Public, HideBySig
+    SetEvaluationError(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Load(String): PrivateScope, Public, HideBySig
+    LoadFromString(String): PrivateScope, Public, HideBySig
+    LoadFromResource(String, String): PrivateScope, Public, HideBySig
+    Eval(String): PrivateScope, Public, HideBySig
+    AddRouter(String, Int32, Router): PrivateScope, Public, HideBySig
+    AssertString(String): PrivateScope, Public, HideBySig
+    InputBufferCount(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Struct CLIPSNET.CLIPSNETType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CLIPSNET.CLIPSNETType UNKNOWN = 0 : Public, Static, Literal, HasDefault
+    CLIPSNET.CLIPSNETType FLOAT = 1 : Public, Static, Literal, HasDefault
+    CLIPSNET.CLIPSNETType INTEGER = 2 : Public, Static, Literal, HasDefault
+    CLIPSNET.CLIPSNETType SYMBOL = 3 : Public, Static, Literal, HasDefault
+    CLIPSNET.CLIPSNETType STRING = 4 : Public, Static, Literal, HasDefault
+    CLIPSNET.CLIPSNETType MULTIFIELD = 5 : Public, Static, Literal, HasDefault
+    CLIPSNET.CLIPSNETType EXTERNAL_ADDRESS = 6 : Public, Static, Literal, HasDefault
+    CLIPSNET.CLIPSNETType FACT_ADDRESS = 7 : Public, Static, Literal, HasDefault
+    CLIPSNET.CLIPSNETType INSTANCE_ADDRESS = 8 : Public, Static, Literal, HasDefault
+    CLIPSNET.CLIPSNETType INSTANCE_NAME = 9 : Public, Static, Literal, HasDefault
+    CLIPSNET.CLIPSNETType VOID = 10 : Public, Static, Literal, HasDefault

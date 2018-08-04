@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>symblcmp.c</FILENAME>
+      <LINE>137</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned long' passed as _Param_(4) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>SymbolHashNodesToCode</FUNCTION>
+    <DECORATED>?SymbolHashNodesToCode@?A0xd2322f38@@$$FYAHPAXPBD1PADH@Z</DECORATED>
+    <FUNCLINE>103</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>symblcmp.c</FILENAME>
+      <LINE>170</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned long' passed as _Param_(5) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>SymbolHashNodesToCode</FUNCTION>
+    <DECORATED>?SymbolHashNodesToCode@?A0xd2322f38@@$$FYAHPAXPBD1PADH@Z</DECORATED>
+    <FUNCLINE>103</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>symblcmp.c</FILENAME>
+      <LINE>173</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned long' passed as _Param_(4) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>SymbolHashNodesToCode</FUNCTION>
+    <DECORATED>?SymbolHashNodesToCode@?A0xd2322f38@@$$FYAHPAXPBD1PADH@Z</DECORATED>
+    <FUNCLINE>103</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>symblcmp.c</FILENAME>
+      <LINE>276</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned short' passed as _Param_(8) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>BitMapHashNodesToCode</FUNCTION>
+    <DECORATED>?BitMapHashNodesToCode@?A0xd2322f38@@$$FYAHPAXPBD1PADH@Z</DECORATED>
+    <FUNCLINE>205</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

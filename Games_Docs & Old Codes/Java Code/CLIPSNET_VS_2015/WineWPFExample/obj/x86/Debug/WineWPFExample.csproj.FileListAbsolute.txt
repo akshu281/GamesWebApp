@@ -1,0 +1,17 @@
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\WineWPFExample\bin\x86\Debug\WineWPFExample.exe.config
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\WineWPFExample\bin\x86\Debug\WineWPFExample.exe
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\WineWPFExample\bin\x86\Debug\WineWPFExample.pdb
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\WineWPFExample\bin\x86\Debug\CLIPSCLRWrapper.dll
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\WineWPFExample\bin\x86\Debug\CLIPSCLRWrapper.pdb
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\WineWPFExample\obj\x86\Debug\WineWPFExample.csprojResolveAssemblyReference.cache
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\WineWPFExample\obj\x86\Debug\WineMainWindow.g.cs
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\WineWPFExample\obj\x86\Debug\App.g.cs
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\WineWPFExample\obj\x86\Debug\WineWPFExample_MarkupCompile.cache
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\WineWPFExample\obj\x86\Debug\WineWPFExample_MarkupCompile.lref
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\WineWPFExample\obj\x86\Debug\WineMainWindow.baml
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\WineWPFExample\obj\x86\Debug\WineWPFExample.g.resources
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\WineWPFExample\obj\x86\Debug\WineWPFExample.Properties.Resources.resources
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\WineWPFExample\obj\x86\Debug\WineWPFExample.csproj.GenerateResource.Cache
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\WineWPFExample\obj\x86\Debug\WineWPFExample.csproj.CoreCompileInputs.cache
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\WineWPFExample\obj\x86\Debug\WineWPFExample.exe
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\WineWPFExample\obj\x86\Debug\WineWPFExample.pdb

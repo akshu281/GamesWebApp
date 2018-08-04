@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>sysdep.c</FILENAME>
+      <LINE>745</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>6031</DEFECTCODE>
+    <DESCRIPTION>Return value ignored: '_read'.</DESCRIPTION>
+    <FUNCTION>GenReadBinary</FUNCTION>
+    <DECORATED>?GenReadBinary@@$$FYAXPAX0I@Z</DECORATED>
+    <FUNCLINE>734</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>sysdep.c</FILENAME>
+      <LINE>751</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>6031</DEFECTCODE>
+    <DESCRIPTION>Return value ignored: '_read'.</DESCRIPTION>
+    <FUNCTION>GenReadBinary</FUNCTION>
+    <DECORATED>?GenReadBinary@@$$FYAXPAX0I@Z</DECORATED>
+    <FUNCLINE>734</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

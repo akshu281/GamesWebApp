@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>cstrncmp.c</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(3) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>ConstraintsToCode</FUNCTION>
+    <DECORATED>?ConstraintsToCode@@$$FYAHPAXPBD1PADHPAU_iobuf@@HH@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>cstrncmp.c</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(4) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>ConstraintsToCode</FUNCTION>
+    <DECORATED>?ConstraintsToCode@@$$FYAHPAXPBD1PADHPAU_iobuf@@HH@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>cstrncmp.c</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(5) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>ConstraintsToCode</FUNCTION>
+    <DECORATED>?ConstraintsToCode@@$$FYAHPAXPBD1PADHPAU_iobuf@@HH@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>cstrncmp.c</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(6) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>ConstraintsToCode</FUNCTION>
+    <DECORATED>?ConstraintsToCode@@$$FYAHPAXPBD1PADHPAU_iobuf@@HH@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>cstrncmp.c</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(7) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>ConstraintsToCode</FUNCTION>
+    <DECORATED>?ConstraintsToCode@@$$FYAHPAXPBD1PADHPAU_iobuf@@HH@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>cstrncmp.c</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(8) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>ConstraintsToCode</FUNCTION>
+    <DECORATED>?ConstraintsToCode@@$$FYAHPAXPBD1PADHPAU_iobuf@@HH@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>cstrncmp.c</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(9) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>ConstraintsToCode</FUNCTION>
+    <DECORATED>?ConstraintsToCode@@$$FYAHPAXPBD1PADHPAU_iobuf@@HH@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>cstrncmp.c</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(10) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>ConstraintsToCode</FUNCTION>
+    <DECORATED>?ConstraintsToCode@@$$FYAHPAXPBD1PADHPAU_iobuf@@HH@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>cstrncmp.c</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(11) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>ConstraintsToCode</FUNCTION>
+    <DECORATED>?ConstraintsToCode@@$$FYAHPAXPBD1PADHPAU_iobuf@@HH@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>cstrncmp.c</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(13) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>ConstraintsToCode</FUNCTION>
+    <DECORATED>?ConstraintsToCode@@$$FYAHPAXPBD1PADHPAU_iobuf@@HH@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>cstrncmp.c</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(14) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>ConstraintsToCode</FUNCTION>
+    <DECORATED>?ConstraintsToCode@@$$FYAHPAXPBD1PADHPAU_iobuf@@HH@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>cstrncmp.c</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(15) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>ConstraintsToCode</FUNCTION>
+    <DECORATED>?ConstraintsToCode@@$$FYAHPAXPBD1PADHPAU_iobuf@@HH@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>cstrncmp.c</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(16) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>ConstraintsToCode</FUNCTION>
+    <DECORATED>?ConstraintsToCode@@$$FYAHPAXPBD1PADHPAU_iobuf@@HH@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>cstrncmp.c</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(17) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>ConstraintsToCode</FUNCTION>
+    <DECORATED>?ConstraintsToCode@@$$FYAHPAXPBD1PADHPAU_iobuf@@HH@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>cstrncmp.c</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(18) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>ConstraintsToCode</FUNCTION>
+    <DECORATED>?ConstraintsToCode@@$$FYAHPAXPBD1PADHPAU_iobuf@@HH@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>cstrncmp.c</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(19) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>ConstraintsToCode</FUNCTION>
+    <DECORATED>?ConstraintsToCode@@$$FYAHPAXPBD1PADHPAU_iobuf@@HH@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>cstrncmp.c</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(20) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>ConstraintsToCode</FUNCTION>
+    <DECORATED>?ConstraintsToCode@@$$FYAHPAXPBD1PADHPAU_iobuf@@HH@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>cstrncmp.c</FILENAME>
+      <LINE>132</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned int' passed as _Param_(21) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>ConstraintsToCode</FUNCTION>
+    <DECORATED>?ConstraintsToCode@@$$FYAHPAXPBD1PADHPAU_iobuf@@HH@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

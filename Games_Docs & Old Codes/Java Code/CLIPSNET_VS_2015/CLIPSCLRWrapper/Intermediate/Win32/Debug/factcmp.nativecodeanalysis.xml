@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>factcmp.c</FILENAME>
+      <LINE>293</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned short' passed as _Param_(3) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>PatternNodeToCode</FUNCTION>
+    <DECORATED>?PatternNodeToCode@?A0xe3ea55c3@@$$FYAXPAXPAU_iobuf@@PAUfactPatternNode@@HH@Z</DECORATED>
+    <FUNCLINE>274</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>factcmp.c</FILENAME>
+      <LINE>293</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned short' passed as _Param_(4) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>PatternNodeToCode</FUNCTION>
+    <DECORATED>?PatternNodeToCode@?A0xe3ea55c3@@$$FYAXPAXPAU_iobuf@@PAUfactPatternNode@@HH@Z</DECORATED>
+    <FUNCLINE>274</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\akshaya balamurugan\desktop\clipsnet_vs_2015\clipsclrwrapper\source\clips\</FILEPATH>
+      <FILENAME>factcmp.c</FILENAME>
+      <LINE>293</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6340</DEFECTCODE>
+    <DESCRIPTION>Mismatch on sign: 'unsigned short' passed as _Param_(5) when some signed type is required in call to 'fprintf'.</DESCRIPTION>
+    <FUNCTION>PatternNodeToCode</FUNCTION>
+    <DECORATED>?PatternNodeToCode@?A0xe3ea55c3@@$$FYAXPAXPAU_iobuf@@PAUfactPatternNode@@HH@Z</DECORATED>
+    <FUNCLINE>274</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

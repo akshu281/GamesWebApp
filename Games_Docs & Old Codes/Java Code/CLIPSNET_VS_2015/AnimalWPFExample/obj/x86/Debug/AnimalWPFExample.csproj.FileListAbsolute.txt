@@ -1,0 +1,16 @@
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\AnimalWPFExample\bin\x86\Debug\AnimalWPFExample.exe.config
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\AnimalWPFExample\bin\x86\Debug\AnimalWPFExample.exe
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\AnimalWPFExample\bin\x86\Debug\AnimalWPFExample.pdb
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\AnimalWPFExample\bin\x86\Debug\CLIPSCLRWrapper.dll
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\AnimalWPFExample\bin\x86\Debug\CLIPSCLRWrapper.pdb
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\AnimalWPFExample\obj\x86\Debug\AnimalMainWindow.g.cs
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\AnimalWPFExample\obj\x86\Debug\App.g.cs
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\AnimalWPFExample\obj\x86\Debug\AnimalWPFExample_MarkupCompile.cache
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\AnimalWPFExample\obj\x86\Debug\AnimalWPFExample_MarkupCompile.lref
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\AnimalWPFExample\obj\x86\Debug\AnimalMainWindow.baml
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\AnimalWPFExample\obj\x86\Debug\AnimalWPFExample.g.resources
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\AnimalWPFExample\obj\x86\Debug\AnimalWPFExample.Properties.Resources.resources
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\AnimalWPFExample\obj\x86\Debug\AnimalWPFExample.csproj.GenerateResource.Cache
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\AnimalWPFExample\obj\x86\Debug\AnimalWPFExample.csproj.CoreCompileInputs.cache
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\AnimalWPFExample\obj\x86\Debug\AnimalWPFExample.exe
+C:\Users\Akshaya Balamurugan\Desktop\CLIPSNET_VS_2015\AnimalWPFExample\obj\x86\Debug\AnimalWPFExample.pdb

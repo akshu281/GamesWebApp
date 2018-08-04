@@ -1,6 +1,6 @@
 package com.games;
 
-import com.google.gson.Gson;
+//import com.google.gson.Gson;
 
 import net.sf.clipsrules.jni.Environment;
 import net.sf.clipsrules.jni.FactAddressValue;
@@ -33,17 +33,19 @@ public class GamesServlet extends HttpServlet {
 	
 	private static final Logger LOGGER = Logger.getLogger(GamesServlet.class.getName());
 
-	private static final Gson gson = new Gson();
+	//private static final Gson gson = new Gson();
 	String datatoassert;
 	
 	public GamesServlet() {
 		
+		System.load(System.getProperty("catalina.base")+"/bin/CLIPSJNI.dll");
 		clips=initialize(clips,Config.getServletContext());
 		
 	}
 	public static Environment initialize(Environment clips, ServletContext servletContext) {
 		// TODO Auto-generated method stub
 		try {
+			
 			clips=new Environment();
 			System.out.println("Opening Rules File in next step");
 			String rules=loadResourceFile(servletContext, "rule.clp");
