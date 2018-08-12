@@ -1,0 +1,9 @@
+.faceshape{
+	width:25%;
+	height:100px;
+}
+
+.faceshape:hover{
+	border:1px solid gray;
+	box-shadow:2px 2px 2px 2px #bebebe;
+}

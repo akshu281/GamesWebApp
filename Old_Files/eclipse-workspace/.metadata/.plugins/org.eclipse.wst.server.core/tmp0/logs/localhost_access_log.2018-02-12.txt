@@ -1,0 +1,13 @@
+127.0.0.1 - - [12/Feb/2018:01:12:10 +0800] "GET / HTTP/1.1" 404 1073
+0:0:0:0:0:0:0:1 - - [12/Feb/2018:01:12:11 +0800] "GET /GamesWebApp/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [12/Feb/2018:01:12:11 +0800] "GET /GamesWebApp/assets/js/games.js HTTP/1.1" 200 9645
+127.0.0.1 - - [12/Feb/2018:14:31:30 +0800] "GET / HTTP/1.1" 404 1073
+0:0:0:0:0:0:0:1 - - [12/Feb/2018:14:31:32 +0800] "GET /GamesWebApp/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [12/Feb/2018:14:31:32 +0800] "GET /GamesWebApp/assets/js/games.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [12/Feb/2018:14:31:33 +0800] "GET /GamesWebApp/assets/img/hitman.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [12/Feb/2018:14:31:59 +0800] "GET /GamesWebApp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [12/Feb/2018:14:31:59 +0800] "GET /GamesWebApp/ HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [12/Feb/2018:14:32:00 +0800] "GET /GamesWebApp/assets/js/games.js HTTP/1.1" 200 9645
+0:0:0:0:0:0:0:1 - - [12/Feb/2018:14:32:01 +0800] "GET /GamesWebApp/assets/img/hitman.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [12/Feb/2018:14:32:23 +0800] "GET /GamesWebApp/games?action=start&optradio=extrovert&optradio1=intuition&optradio2=thinking&optradio3=judging&optradio4=solo&optradio5=yes HTTP/1.1" 200 20
+0:0:0:0:0:0:0:1 - - [12/Feb/2018:14:35:56 +0800] "GET /GamesWebApp/games?action=start&optradio=extrovert&optradio1=sensation&optradio2=feeling&optradio3=judging&optradio4=solo&optradio5=yes HTTP/1.1" 200 20

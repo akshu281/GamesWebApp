@@ -1,0 +1,1 @@
+(deftemplate person (slot name)(slot age)(slot occupation))

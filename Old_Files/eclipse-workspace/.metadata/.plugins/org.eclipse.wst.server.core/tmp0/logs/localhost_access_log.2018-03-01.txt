@@ -1,0 +1,14 @@
+127.0.0.1 - - [01/Mar/2018:01:01:44 +0800] "GET / HTTP/1.1" 404 1073
+0:0:0:0:0:0:0:1 - - [01/Mar/2018:01:01:44 +0800] "GET /GamesWebApp/ HTTP/1.1" 200 11422
+0:0:0:0:0:0:0:1 - - [01/Mar/2018:01:01:45 +0800] "GET /GamesWebApp/assets/css/bootstrap.min.css HTTP/1.1" 200 122541
+0:0:0:0:0:0:0:1 - - [01/Mar/2018:01:01:45 +0800] "GET /GamesWebApp/assets/css/material-bootstrap-wizard.css HTTP/1.1" 200 50080
+0:0:0:0:0:0:0:1 - - [01/Mar/2018:01:01:45 +0800] "GET /GamesWebApp/assets/js/jquery-2.2.4.min.js HTTP/1.1" 200 85578
+0:0:0:0:0:0:0:1 - - [01/Mar/2018:01:01:45 +0800] "GET /GamesWebApp/assets/js/bootstrap.min.js HTTP/1.1" 200 36816
+0:0:0:0:0:0:0:1 - - [01/Mar/2018:01:01:45 +0800] "GET /GamesWebApp/assets/js/jquery.validate.min.js HTTP/1.1" 200 21090
+0:0:0:0:0:0:0:1 - - [01/Mar/2018:01:01:45 +0800] "GET /GamesWebApp/assets/js/jquery.bootstrap.js HTTP/1.1" 200 17501
+0:0:0:0:0:0:0:1 - - [01/Mar/2018:01:01:45 +0800] "GET /GamesWebApp/assets/js/games.js HTTP/1.1" 200 10777
+0:0:0:0:0:0:0:1 - - [01/Mar/2018:01:01:45 +0800] "GET /GamesWebApp/assets/img/MBTI.jpg HTTP/1.1" 200 146638
+0:0:0:0:0:0:0:1 - - [01/Mar/2018:01:01:45 +0800] "GET /GamesWebApp/assets/img/favicon.png HTTP/1.1" 200 2761
+0:0:0:0:0:0:0:1 - - [01/Mar/2018:01:01:56 +0800] "POST /GamesWebApp/games HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [01/Mar/2018:01:02:14 +0800] "POST /GamesWebApp/games HTTP/1.1" 200 12
+0:0:0:0:0:0:0:1 - - [01/Mar/2018:01:02:16 +0800] "GET /GamesWebApp/games?action=finish HTTP/1.1" 200 268
